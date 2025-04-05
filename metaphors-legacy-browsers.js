@@ -1452,16 +1452,19 @@ function endRoutineBegin(snapshot) {
     let dataJSON = JSON.stringify(psychoJS.experiment._trialsData);
     
     fetch("https://pipe.jspsych.org/api/data/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "*/*",
-      },
-      body: JSON.stringify({
-        experimentID: "mTRdgdPYEvkD",
-        filename: `${filename}.json`,
-        data: dataJSON,
-      }),
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "*/*",
+          },
+          body: JSON.stringify({
+            experimentID: "mTRdgdPYEvkD",
+            filename: `${filename}.json`,
+            data: dataJSON,
+          }),
+    }).then(response => response.json()).then(data => {
+        console.log(data);
+        quitPsychoJS();
     });
     
     psychoJS.experiment.addData('end.started', globalClock.getTime());

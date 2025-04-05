@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on April 05, 2025, at 14:54
+    on April 05, 2025, at 23:32
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -1451,7 +1451,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         method='random', 
         extraInfo=expInfo, 
         originPath=-1, 
-        trialList=data.importConditions('resources/idiomStimuli.xlsx'), 
+        trialList=data.importConditions('resources/test.xlsx'), 
         seed=None, 
     )
     thisExp.addLoop(trials)  # add the loop to the experiment
