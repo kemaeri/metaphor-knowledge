@@ -102,11 +102,11 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="psychoJS.eventManager.clearEvents();&amp;#10;words = idiom.split(&quot; &quot;);&amp;#10;sentPos = 0;&amp;#10;stimulus = words[sentPos];&amp;#10;clock = new util.Clock();&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# clear any previous keypresses&amp;#10;event.clearEvents()&amp;#10;&amp;#10;# parse stimulus&amp;#10;words = idiom.split(&quot; &quot;)&amp;#10;&amp;#10;# prepare word display&amp;#10;sentPos = 0&amp;#10;stimulus = words[sentPos]&amp;#10;&amp;#10;# initiate clock&amp;#10;clock = core.Clock()" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="# listen for keys&amp;#10;theseKeys = event.getKeys([&quot;space&quot;,&quot;escape&quot;])&amp;#10;n = len(theseKeys)&amp;#10;i = 0&amp;#10;&amp;#10;# action on keypress&amp;#10;while n &gt; i:&amp;#10;    if theseKeys[i] == &quot;escape&quot;:&amp;#10;        # break out of experiment when escape is pressed&amp;#10;        quit()&amp;#10;        break&amp;#10;    elif theseKeys[i] == &quot;space&quot;:&amp;#10;        thisExp.addData(&quot;readingTimes&quot;,clock.getTime())&amp;#10;        thisExp.addData(&quot;sentPos&quot;, sentPos)&amp;#10;        thisExp.addData(&quot;word&quot;, stimulus)&amp;#10;        thisExp.nextEntry()&amp;#10;        clock.reset()&amp;#10;        # update sentence position on spacebar press&amp;#10;        sentPos += 1&amp;#10;        if sentPos == len(words):&amp;#10;            # if end of sentence is reached, exit routine&amp;#10;            continueRoutine = False&amp;#10;            break&amp;#10;        stimulus = words[sentPos]&amp;#10;        i += 1" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="theseKeys = psychoJS.eventManager.getKeys([&quot;space&quot;, &quot;escape&quot;]);&amp;#10;n = theseKeys.length;&amp;#10;i = 0;&amp;#10;while ((n &gt; i)) {&amp;#10;    if ((theseKeys[i] === &quot;escape&quot;)) {&amp;#10;        quit();&amp;#10;        break;&amp;#10;    } else {&amp;#10;        if ((theseKeys[i] === &quot;space&quot;)) {&amp;#10;            psychoJS.experiment.addData(&quot;readingTimes&quot;, clock.getTime());&amp;#10;            psychoJS.experiment.addData(&quot;sentPos&quot;, sentPos);&amp;#10;            psychoJS.experiment.addData(&quot;word&quot;, stimulus);&amp;#10;            psychoJS.experiment.nextEntry();&amp;#10;            clock.reset();&amp;#10;            sentPos += 1;&amp;#10;            if ((sentPos === words.length)) {&amp;#10;                continueRoutine = false;&amp;#10;                break;&amp;#10;            }&amp;#10;            stimulus = words[sentPos];&amp;#10;            i += 1;&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="psychoJS.eventManager.clearEvents();&amp;#10;trialText.setText(&quot;&quot;);&amp;#10;words = idiom.split(&quot; &quot;);&amp;#10;sentPos = 0;&amp;#10;stimulus = words[sentPos];&amp;#10;clock = new util.Clock();&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# clear any previous keypresses&amp;#10;event.clearEvents()&amp;#10;trialText.setText(&quot;&quot;)&amp;#10;# parse stimulus&amp;#10;words = idiom.split(&quot; &quot;)&amp;#10;&amp;#10;# prepare word display&amp;#10;sentPos = 0&amp;#10;stimulus = words[sentPos]&amp;#10;&amp;#10;# initiate clock&amp;#10;clock = core.Clock()" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Both" valType="str" updates="None" name="Code Type"/>
+        <Param val="theseKeys = event.getKeys([&quot;space&quot;,&quot;escape&quot;])&amp;#10;n = len(theseKeys)&amp;#10;i = 0&amp;#10;&amp;#10;# action on keypress&amp;#10;while n &gt; i:&amp;#10;    if theseKeys[0] == &quot;escape&quot;:&amp;#10;        # break out of experiment when escape is pressed&amp;#10;        quit()&amp;#10;        break&amp;#10;    elif theseKeys[0] == &quot;space&quot;:&amp;#10;        thisExp.addData(&quot;readingTimes&quot;,clock.getTime())&amp;#10;        thisExp.addData(&quot;sentPos&quot;, sentPos)&amp;#10;        thisExp.addData(&quot;word&quot;, stimulus)&amp;#10;        thisExp.nextEntry()&amp;#10;        clock.reset()&amp;#10;        # update sentence position on spacebar press&amp;#10;        sentPos += 1&amp;#10;        if sentPos == len(words):&amp;#10;            # if end of sentence is reached, exit routine&amp;#10;            continueRoutine = False&amp;#10;            break&amp;#10;        stimulus = words[sentPos]&amp;#10;        i += 1&amp;#10;    else:&amp;#10;        theseKeys = []" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="theseKeys = psychoJS.eventManager.getKeys({keyList:[&quot;space&quot;, &quot;escape&quot;]});&amp;#10;n = theseKeys.length;&amp;#10;i = 0;&amp;#10;while ((n &gt; i)) {&amp;#10;    if ((theseKeys[0] === &quot;escape&quot;)) {&amp;#10;        quit();&amp;#10;        break;&amp;#10;    } else {&amp;#10;        if ((theseKeys[0] === &quot;space&quot;)) {&amp;#10;            psychoJS.experiment.addData(&quot;readingTimes&quot;, clock.getTime());&amp;#10;            psychoJS.experiment.addData(&quot;sentPos&quot;, sentPos);&amp;#10;            psychoJS.experiment.addData(&quot;word&quot;, stimulus);&amp;#10;            psychoJS.experiment.nextEntry();&amp;#10;            clock.reset();&amp;#10;            sentPos += 1;&amp;#10;            if ((sentPos === words.length)) {&amp;#10;                continueRoutine = false;&amp;#10;                break;&amp;#10;            }&amp;#10;            stimulus = words[sentPos];&amp;#10;            i += 1;&amp;#10;        } else {&amp;#10;            theseKeys = [];&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
@@ -114,26 +114,6 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="trialCode" valType="code" updates="None" name="name"/>
       </CodeComponent>
-      <KeyboardComponent name="trialKey" plugin="None">
-        <Param val="'space'" valType="list" updates="set every repeat" name="allowedKeys"/>
-        <Param val="" valType="str" updates="constant" name="correctAns"/>
-        <Param val="" valType="str" updates="None" name="deviceLabel"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="constant" name="forceEndRoutine"/>
-        <Param val="trialKey" valType="code" updates="None" name="name"/>
-        <Param val="press" valType="str" updates="constant" name="registerOn"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="last key" valType="str" updates="constant" name="store"/>
-        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
-      </KeyboardComponent>
       <TextComponent name="trialText" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -163,20 +143,6 @@
       </TextComponent>
     </Routine>
     <Routine name="welcome">
-      <ResourceManagerComponent name="resourcesWelcome" plugin="None">
-        <Param val="Start and Check" valType="str" updates="None" name="actionType"/>
-        <Param val="True" valType="bool" updates="None" name="checkAll"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="constant" name="forceEndRoutine"/>
-        <Param val="resourcesWelcome" valType="code" updates="None" name="name"/>
-        <Param val="['resources/idiomStimuli.xlsx', 'resources/practiceStimuli.xlsx']" valType="list" updates="constant" name="resources"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-      </ResourceManagerComponent>
       <RoutineSettingsComponent name="welcome" plugin="None">
         <Param val="none" valType="str" updates="None" name="backgroundFit"/>
         <Param val="" valType="str" updates="None" name="backgroundImg"/>
@@ -218,7 +184,7 @@
         <Param val="Welkom!&amp;#10;&amp;#10;In dit onderzoek ga je steeds een zin lezen en dan een vraag beantwoorden. Je ziet de hele zin niet in één keer. Er verschijnt steeds een nieuw stukje als je op de spatiebalk drukt.&amp;#10;&amp;#10;We gaan eerst even oefenen.&amp;#10;&amp;#10;Druk op de spatiebalk om verder te gaan." valType="str" updates="constant" name="text"/>
         <Param val="norm" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
-        <Param val="1.8" valType="num" updates="constant" name="wrapWidth"/>
+        <Param val="1.5" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="keyWelcome" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
@@ -261,13 +227,13 @@
       <CodeComponent name="questionCode" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="def setCorrKey(index):&amp;#10;    if index == 0:&amp;#10;        corrKey = 'a'&amp;#10;    elif index == 1:&amp;#10;        corrKey = 'b'&amp;#10;    elif index == 2:&amp;#10;        corrKey = 'c'&amp;#10;    return corrKey&amp;#10;        &amp;#10;def getParticipantAnswer(key,ansList):&amp;#10;    # use input key to select chosen sentence&amp;#10;    if key == 'a':&amp;#10;        answer = ansList[0]&amp;#10;    elif key == 'b':&amp;#10;        answer = ansList[1]&amp;#10;    elif key == 'c':&amp;#10;        answer = ansList[2]&amp;#10;    &amp;#10;    # use chosen sentence to select sentence type&amp;#10;    if answer == meaning_idiomatic:&amp;#10;        answer = &quot;idiomatic&quot;&amp;#10;    if answer == meaning_distractor:&amp;#10;        answer = &quot;distractor&quot;&amp;#10;    if answer == meaning_literal:&amp;#10;        answer = &quot;literal&quot;    &amp;#10;    return answer&amp;#10;    &amp;#10;    " valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="function setCorrKey(index) {&amp;#10;    var corrKey;&amp;#10;    if ((index === 0)) {&amp;#10;        corrKey = &quot;a&quot;;&amp;#10;    } else {&amp;#10;        if ((index === 1)) {&amp;#10;            corrKey = &quot;b&quot;;&amp;#10;        } else {&amp;#10;            if ((index === 2)) {&amp;#10;                corrKey = &quot;c&quot;;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    return corrKey;&amp;#10;}&amp;#10;function getParticipantAnswer(key, ansList) {&amp;#10;    var answer;&amp;#10;    if ((key === &quot;a&quot;)) {&amp;#10;        answer = ansList[0];&amp;#10;    } else {&amp;#10;        if ((key === &quot;b&quot;)) {&amp;#10;            answer = ansList[1];&amp;#10;        } else {&amp;#10;            if ((key === &quot;c&quot;)) {&amp;#10;                answer = ansList[2];&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    if ((answer === meaning_idiomatic)) {&amp;#10;        answer = &quot;idiomatic&quot;;&amp;#10;    }&amp;#10;    if ((answer === meaning_distractor)) {&amp;#10;        answer = &quot;distractor&quot;;&amp;#10;    }&amp;#10;    if ((answer === meaning_literal)) {&amp;#10;        answer = &quot;literal&quot;;&amp;#10;    }&amp;#10;    return answer;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="psychoJS.eventManager.clearEvents();&amp;#10;answers = [meaning_idiomatic, meaning_literal, meaning_distractor];&amp;#10;util.shuffle(answers);&amp;#10;ans1 = answers[0];&amp;#10;ans2 = answers[1];&amp;#10;ans3 = answers[2];&amp;#10;if (((stimType === &quot;experimental&quot;) || (stimType === &quot;practice_e&quot;))) {&amp;#10;    correct = util.index(answers, meaning_idiomatic);&amp;#10;} else {&amp;#10;    if (((stimType === &quot;filler&quot;) || (stimType === &quot;practice_f&quot;))) {&amp;#10;        correct = util.index(answers, meaning_literal);&amp;#10;    }&amp;#10;}&amp;#10;corrKey = setCorrKey(correct);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# empty buffer&amp;#10;event.clearEvents()&amp;#10;&amp;#10;# randomize multiple choice answer positions&amp;#10;answers = [meaning_idiomatic,meaning_literal,meaning_distractor]&amp;#10;shuffle(answers)&amp;#10;&amp;#10;# set answers for display in correct order&amp;#10;ans1 = answers[0]&amp;#10;ans2 = answers[1]&amp;#10;ans3 = answers[2]&amp;#10;&amp;#10;# get index of correct answer&amp;#10;if stimType == &quot;experimental&quot; or stimType == &quot;practice_e&quot;:&amp;#10;    correct = answers.index(meaning_idiomatic)&amp;#10;elif stimType == &quot;filler&quot; or stimType == &quot;practice_f&quot;:&amp;#10;    correct = answers.index(meaning_literal)&amp;#10;&amp;#10;# set correct answer key&amp;#10;corrKey = setCorrKey(correct)&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="# evaluate correctness of given response&amp;#10;theseKeys = event.getKeys(['a','b','c','escape'])&amp;#10;n = len(theseKeys)&amp;#10;i = 0&amp;#10;&amp;#10;# action on keypress&amp;#10;while n &gt; i:&amp;#10;    if theseKeys[i] == &quot;escape&quot;:&amp;#10;        # break out of experiment when escape is pressed&amp;#10;        quit()&amp;#10;        break&amp;#10;    else:&amp;#10;        participantAnswer = getParticipantAnswer(theseKeys[i],answers)&amp;#10;        if corrKey == theseKeys[i]:&amp;#10;            questionCorrect = 1&amp;#10;        else: &amp;#10;            questionCorrect = 0&amp;#10;        thisExp.addData(&quot;questionCorrect&quot;, questionCorrect)&amp;#10;        thisExp.addData(&quot;participantAnswer&quot;, participantAnswer)&amp;#10;        thisExp.nextEntry()&amp;#10;        continueRoutine=False&amp;#10;        i += 1" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="theseKeys = psychoJS.eventManager.getKeys([&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;escape&quot;]);&amp;#10;n = theseKeys.length;&amp;#10;i = 0;&amp;#10;while ((n &gt; i)) {&amp;#10;    if ((theseKeys[i] === &quot;escape&quot;)) {&amp;#10;        quit();&amp;#10;        break;&amp;#10;    } else {&amp;#10;        participantAnswer = getParticipantAnswer(theseKeys[i], answers);&amp;#10;        if ((corrKey === theseKeys[i])) {&amp;#10;            questionCorrect = 1;&amp;#10;        } else {&amp;#10;            questionCorrect = 0;&amp;#10;        }&amp;#10;        psychoJS.experiment.addData(&quot;questionCorrect&quot;, questionCorrect);&amp;#10;        psychoJS.experiment.addData(&quot;participantAnswer&quot;, participantAnswer);&amp;#10;        psychoJS.experiment.nextEntry();&amp;#10;        continueRoutine = false;&amp;#10;        i += 1;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="function setCorrKey(index) {&amp;#10;    if ((index === 0)) {&amp;#10;        corrKey = &quot;a&quot;;&amp;#10;    } else {&amp;#10;        if ((index === 1)) {&amp;#10;            corrKey = &quot;b&quot;;&amp;#10;        } else {&amp;#10;            if ((index === 2)) {&amp;#10;                corrKey = &quot;c&quot;;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    return corrKey;&amp;#10;}&amp;#10;&amp;#10;// empty buffer&amp;#10;psychoJS.eventManager.clearEvents();&amp;#10;questionText.setText(&quot;&quot;)&amp;#10;&amp;#10;// randomize multiple choice answer positions&amp;#10;answers = [meaning_idiomatic, meaning_literal, meaning_distractor];&amp;#10;util.shuffle(answers);&amp;#10;&amp;#10;// set answers for display in correct order&amp;#10;ans1 = answers[0];&amp;#10;ans2 = answers[1];&amp;#10;ans3 = answers[2];&amp;#10;&amp;#10;// get index of correct answer&amp;#10;if (((stimType === &quot;experimental&quot;) || (stimType === &quot;practice_e&quot;))) {&amp;#10;    correct = util.index(answers, meaning_idiomatic);&amp;#10;} else {&amp;#10;    if (((stimType === &quot;filler&quot;) || (stimType === &quot;practice_f&quot;))) {&amp;#10;        correct = util.index(answers, meaning_literal);&amp;#10;    }&amp;#10;}&amp;#10;&amp;#10;// set correct answer key&amp;#10;corrKey = setCorrKey(correct);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# functions&amp;#10;def setCorrKey(index):&amp;#10;    if index == 0:&amp;#10;        corrKey = 'a'&amp;#10;    elif index == 1:&amp;#10;        corrKey = 'b'&amp;#10;    elif index == 2:&amp;#10;        corrKey = 'c'&amp;#10;    return corrKey&amp;#10;        &amp;#10;# empty buffer&amp;#10;event.clearEvents()&amp;#10;questionText.setText(&quot;&quot;)&amp;#10;&amp;#10;# randomize multiple choice answer positions&amp;#10;answers = [meaning_idiomatic,meaning_literal,meaning_distractor]&amp;#10;shuffle(answers)&amp;#10;&amp;#10;# set answers for display in correct order&amp;#10;ans1 = answers[0]&amp;#10;ans2 = answers[1]&amp;#10;ans3 = answers[2]&amp;#10;&amp;#10;# get index of correct answer&amp;#10;if stimType == &quot;experimental&quot; or stimType == &quot;practice_e&quot;:&amp;#10;    correct = answers.index(meaning_idiomatic)&amp;#10;elif stimType == &quot;filler&quot; or stimType == &quot;practice_f&quot;:&amp;#10;    correct = answers.index(meaning_literal)&amp;#10;&amp;#10;# set correct answer key&amp;#10;corrKey = setCorrKey(correct)&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Both" valType="str" updates="None" name="Code Type"/>
+        <Param val="# functions&amp;#10;def getParticipantAnswer(key,ansList):&amp;#10;    # use input key to select chosen sentence&amp;#10;    if key == 'a':&amp;#10;        answer = ansList[0]&amp;#10;    elif key == 'b':&amp;#10;        answer = ansList[1]&amp;#10;    elif key == 'c':&amp;#10;        answer = ansList[2]&amp;#10;    &amp;#10;    # use chosen sentence to select sentence type&amp;#10;    if answer == meaning_idiomatic:&amp;#10;        answer = &quot;idiomatic&quot;&amp;#10;    if answer == meaning_distractor:&amp;#10;        answer = &quot;distractor&quot;&amp;#10;    if answer == meaning_literal:&amp;#10;        answer = &quot;literal&quot;    &amp;#10;    return answer&amp;#10;    &amp;#10;# evaluate correctness of given response&amp;#10;theseKeys = event.getKeys(['a','b','c','escape'])&amp;#10;n = len(theseKeys)&amp;#10;i = 0&amp;#10;&amp;#10;# action on keypress&amp;#10;while n &gt; i:&amp;#10;    if theseKeys[i] == &quot;escape&quot;:&amp;#10;        # break out of experiment when escape is pressed&amp;#10;        quit()&amp;#10;        break&amp;#10;    elif theseKeys[i] == &quot;a&quot; or theseKeys[i] == &quot;b&quot; or theseKeys[i] == &quot;c&quot;:&amp;#10;        participantAnswer = getParticipantAnswer(theseKeys[i],answers)&amp;#10;        if corrKey == theseKeys[i]:&amp;#10;            questionCorrect = 1&amp;#10;        else: &amp;#10;            questionCorrect = 0&amp;#10;        thisExp.addData(&quot;questionCorrect&quot;, questionCorrect)&amp;#10;        thisExp.addData(&quot;participantAnswer&quot;, participantAnswer)&amp;#10;        thisExp.nextEntry()&amp;#10;        continueRoutine=False&amp;#10;        i += 1" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="function getParticipantAnswer(key, ansList) {&amp;#10;    var answer;&amp;#10;    if ((key === &quot;a&quot;)) {&amp;#10;        answer = ansList[0];&amp;#10;    } else {&amp;#10;        if ((key === &quot;b&quot;)) {&amp;#10;            answer = ansList[1];&amp;#10;        } else {&amp;#10;            if ((key === &quot;c&quot;)) {&amp;#10;                answer = ansList[2];&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    if ((answer === meaning_idiomatic)) {&amp;#10;        answer = &quot;idiomatic&quot;;&amp;#10;    }&amp;#10;    if ((answer === meaning_distractor)) {&amp;#10;        answer = &quot;distractor&quot;;&amp;#10;    }&amp;#10;    if ((answer === meaning_literal)) {&amp;#10;        answer = &quot;literal&quot;;&amp;#10;    }&amp;#10;    return answer;&amp;#10;}&amp;#10;theseKeys = psychoJS.eventManager.getKeys({keyList:[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;escape&quot;]});&amp;#10;n = theseKeys.length;&amp;#10;i = 0;&amp;#10;participantAnswer = &quot;&quot;&amp;#10;questionCorrect = undefined&amp;#10;&amp;#10;while ((n &gt; i)) {&amp;#10;    if ((theseKeys[i] === &quot;escape&quot;)) {&amp;#10;        quit();&amp;#10;        break;&amp;#10;    } else {&amp;#10;        if ((((theseKeys[i] === &quot;a&quot;) || (theseKeys[i] === &quot;b&quot;)) || (theseKeys[i] === &quot;c&quot;))) {&amp;#10;            participantAnswer = getParticipantAnswer(theseKeys[i], answers);&amp;#10;            if ((corrKey === theseKeys[i])) {&amp;#10;                questionCorrect = 1;&amp;#10;            } else {&amp;#10;                questionCorrect = 0;&amp;#10;            }&amp;#10;            psychoJS.experiment.addData(&quot;questionCorrect&quot;, questionCorrect);&amp;#10;            psychoJS.experiment.addData(&quot;participantAnswer&quot;, participantAnswer);&amp;#10;            psychoJS.experiment.nextEntry();&amp;#10;            continueRoutine = false;&amp;#10;            i += 1;&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
@@ -297,31 +263,11 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="$'***** Wat betekent deze zin? *****\n\n\n(a) ' + ans1 + '\n\n(b) ' + ans2 + '\n\n(c) ' + ans3 + '\n\n\nKies je antwoord met (a), (b) of (c)'" valType="str" updates="set every repeat" name="text"/>
+        <Param val="$'***** Wat betekent deze zin? *****\n\n\n(a) ' + ans1 + '\n\n(b) ' + ans2 + '\n\n(c) ' + ans3 + '\n\n\nKies je antwoord met (a), (b) of (c)'" valType="str" updates="set every frame" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
-        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+        <Param val="1.5" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <KeyboardComponent name="questionKey" plugin="None">
-        <Param val="'a','b','c'" valType="list" updates="set every repeat" name="allowedKeys"/>
-        <Param val="$corrAns" valType="str" updates="constant" name="correctAns"/>
-        <Param val="" valType="str" updates="None" name="deviceLabel"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="bool" updates="constant" name="forceEndRoutine"/>
-        <Param val="questionKey" valType="code" updates="None" name="name"/>
-        <Param val="press" valType="str" updates="constant" name="registerOn"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="last key" valType="str" updates="constant" name="store"/>
-        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
-      </KeyboardComponent>
     </Routine>
     <Routine name="start">
       <RoutineSettingsComponent name="start" plugin="None">
@@ -387,42 +333,8 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
-      <CodeComponent name="alignStart" plugin="None">
-        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="# Code components should usually appear at the top&amp;#10;# of the routine. This one has to appear after the&amp;#10;# text component it refers to.&amp;#10;textStart.alignText= 'center'" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="// Code component set to Both&amp;#10;textStart.setAlignHoriz('center')" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Both" valType="str" updates="None" name="Code Type"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="alignStart" valType="code" updates="None" name="name"/>
-      </CodeComponent>
     </Routine>
     <Routine name="end">
-      <CodeComponent name="codeEnd" plugin="None">
-        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="/* Syntax Error: Fix Python code */" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="// Disable downloading results to browser&amp;#10;psychoJS._saveResults = 0;&amp;#10;&amp;#10;// Generate filename for results&amp;#10;let filename = expInfo[&quot;group&quot;] + &quot;_group_participant_&quot; + expInfo[&quot;participant&quot;] + &quot;_&quot; + psychoJS._experiment._experimentName + '_' + psychoJS._experiment._datetime + '.csv';&amp;#10;&amp;#10;// Extract data object from experiment&amp;#10;let dataObj = psychoJS._experiment._trialsData;&amp;#10;&amp;#10;// Convert data object to CSV&amp;#10;let data = [Object.keys(dataObj[0])].concat(dataObj).map(it =&gt; {&amp;#10;        return Object.values(it).toString()&amp;#10;    }).join('\n')&amp;#10;&amp;#10;// Send data to OSF via DataPipe&amp;#10;console.log('Saving data...');&amp;#10;fetch('https://pipe.jspsych.org/api/data', {&amp;#10;    method: &quot;POST&quot;,&amp;#10;    headers: {&amp;#10;        'Content-Type': 'application/json',&amp;#10;        Accept: &quot;*/*&quot;,&amp;#10;    },&amp;#10;    body: JSON.stringify({&amp;#10;        experimentID: 'mTRdgdPYEvkD',&amp;#10;        filename: filename,&amp;#10;        data: data,&amp;#10;    }),&amp;#10;}).then(response =&gt; response.json()).then(data =&gt; {&amp;#10;    // Log response and force experiment end&amp;#10;    console.log(data);&amp;#10;    quitPsychoJS();&amp;#10;})&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="codeEnd" valType="code" updates="None" name="name"/>
-      </CodeComponent>
       <RoutineSettingsComponent name="end" plugin="None">
         <Param val="none" valType="str" updates="None" name="backgroundFit"/>
         <Param val="" valType="str" updates="None" name="backgroundImg"/>
@@ -439,6 +351,23 @@
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
+      <CodeComponent name="codeEnd" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="// Disable downloading results to browser&amp;#10;psychoJS._saveResults = 0;&amp;#10;&amp;#10;// Generate filename for results&amp;#10;let filename = expInfo[&quot;group&quot;] + &quot;_group_participant_&quot; + expInfo[&quot;participant&quot;] + &quot;_&quot; + psychoJS._experiment._experimentName + '_' + psychoJS._experiment._datetime + '.csv';&amp;#10;&amp;#10;// Extract data object from experiment&amp;#10;let dataObj = psychoJS._experiment._trialsData;&amp;#10;&amp;#10;// Convert data object to CSV&amp;#10;let data = [Object.keys(dataObj[0])].concat(dataObj).map(it =&gt; {&amp;#10;        return Object.values(it).toString()&amp;#10;    }).join('\n')&amp;#10;&amp;#10;// Send data to OSF via DataPipe&amp;#10;console.log('Saving data...');&amp;#10;fetch('https://pipe.jspsych.org/api/data', {&amp;#10;    method: &quot;POST&quot;,&amp;#10;    headers: {&amp;#10;        'Content-Type': 'application/json',&amp;#10;        Accept: &quot;*/*&quot;,&amp;#10;    },&amp;#10;    body: JSON.stringify({&amp;#10;        experimentID: 'mTRdgdPYEvkD',&amp;#10;        filename: filename,&amp;#10;        data: data,&amp;#10;    }),&amp;#10;}).then(response =&gt; response.json()).then(data =&gt; {&amp;#10;    // Log response and force experiment end&amp;#10;    console.log(data);&amp;#10;    quitPsychoJS();&amp;#10;})&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Both" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="codeEnd" valType="code" updates="None" name="name"/>
+      </CodeComponent>
       <TextComponent name="textEnd" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>

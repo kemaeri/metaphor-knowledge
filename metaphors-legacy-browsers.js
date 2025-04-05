@@ -114,17 +114,14 @@ async function updateInfo() {
 
 
 var welcomeClock;
-var resourcesWelcome;
 var textWelcome;
 var keyWelcome;
 var fixClock;
 var fixation;
 var trialClock;
-var trialKey;
 var trialText;
 var questionClock;
 var questionText;
-var questionKey;
 var feedbackClock;
 var fb;
 var startClock;
@@ -142,19 +139,16 @@ var routineTimer;
 async function experimentInit() {
   // Initialize components for Routine "welcome"
   welcomeClock = new util.Clock();
-  resourcesWelcome = {
-    status: PsychoJS.Status.NOT_STARTED
-  };
   textWelcome = new visual.TextStim({
     win: psychoJS.window,
     name: 'textWelcome',
     text: 'Welkom!\n\nIn dit onderzoek ga je steeds een zin lezen en dan een vraag beantwoorden. Je ziet de hele zin niet in één keer. Er verschijnt steeds een nieuw stukje als je op de spatiebalk drukt.\n\nWe gaan eerst even oefenen.\n\nDruk op de spatiebalk om verder te gaan.',
     font: 'Arial',
     units: 'norm', 
-    pos: [0, 0], draggable: false, height: 0.1,  wrapWidth: 1.8, ori: 0.0,
+    pos: [0, 0], draggable: false, height: 0.1,  wrapWidth: 1.5, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
-    depth: -1.0 
+    depth: 0.0 
   });
   
   keyWelcome = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
@@ -175,8 +169,6 @@ async function experimentInit() {
   
   // Initialize components for Routine "trial"
   trialClock = new util.Clock();
-  trialKey = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
-  
   trialText = new visual.TextStim({
     win: psychoJS.window,
     name: 'trialText',
@@ -186,65 +178,22 @@ async function experimentInit() {
     pos: [0, 0], draggable: false, height: 0.05,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
-    depth: -2.0 
+    depth: -1.0 
   });
   
   // Initialize components for Routine "question"
   questionClock = new util.Clock();
-  // Run 'Begin Experiment' code from questionCode
-  function setCorrKey(index) {
-      var corrKey;
-      if ((index === 0)) {
-          corrKey = "a";
-      } else {
-          if ((index === 1)) {
-              corrKey = "b";
-          } else {
-              if ((index === 2)) {
-                  corrKey = "c";
-              }
-          }
-      }
-      return corrKey;
-  }
-  function getParticipantAnswer(key, ansList) {
-      var answer;
-      if ((key === "a")) {
-          answer = ansList[0];
-      } else {
-          if ((key === "b")) {
-              answer = ansList[1];
-          } else {
-              if ((key === "c")) {
-                  answer = ansList[2];
-              }
-          }
-      }
-      if ((answer === meaning_idiomatic)) {
-          answer = "idiomatic";
-      }
-      if ((answer === meaning_distractor)) {
-          answer = "distractor";
-      }
-      if ((answer === meaning_literal)) {
-          answer = "literal";
-      }
-      return answer;
-  }
-  
   questionText = new visual.TextStim({
     win: psychoJS.window,
     name: 'questionText',
     text: '',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], draggable: false, height: 0.05,  wrapWidth: undefined, ori: 0.0,
+    pos: [0, 0], draggable: false, height: 0.05,  wrapWidth: 1.5, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
     depth: -1.0 
   });
-  
-  questionKey = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Initialize components for Routine "feedback"
   feedbackClock = new util.Clock();
@@ -276,9 +225,6 @@ async function experimentInit() {
   
   keyStart = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
-  // Run 'Begin Experiment' code from alignStart
-  // Code component set to Both
-  textStart.setAlignHoriz('center')
   // Initialize components for Routine "pause"
   pauseClock = new util.Clock();
   // Run 'Begin Experiment' code from pauseCode
@@ -350,7 +296,6 @@ function welcomeRoutineBegin(snapshot) {
     welcomeMaxDuration = null
     // keep track of which components have finished
     welcomeComponents = [];
-    welcomeComponents.push(resourcesWelcome);
     welcomeComponents.push(textWelcome);
     welcomeComponents.push(keyWelcome);
     
@@ -370,21 +315,6 @@ function welcomeRoutineEachFrame() {
     t = welcomeClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
-    // start downloading resources specified by component resourcesWelcome
-    if (t >= 0 && resourcesWelcome.status === PsychoJS.Status.NOT_STARTED) {
-      console.log('register and start downloading resources specified by component resourcesWelcome');
-      await psychoJS.serverManager.prepareResources(core.ServerManager.ALL_RESOURCES);
-      resourcesWelcome.status = PsychoJS.Status.STARTED;
-    }
-    // check on the resources specified by component resourcesWelcome
-    if (t >= null && resourcesWelcome.status === PsychoJS.Status.STARTED) {
-      if (psychoJS.serverManager.getResourceStatus(core.ServerManager.ALL_RESOURCES) === core.ServerManager.ResourceStatus.DOWNLOADED) {
-        console.log('finished downloading resources specified by component resourcesWelcome');
-        resourcesWelcome.status = PsychoJS.Status.FINISHED;
-      } else {
-        console.log('resource specified in resourcesWelcome took longer than expected to download');
-      }
-    }
     
     // *textWelcome* updates
     if (t >= 0.0 && textWelcome.status === PsychoJS.Status.NOT_STARTED) {
@@ -732,7 +662,6 @@ var words;
 var sentPos;
 var stimulus;
 var clock;
-var _trialKey_allKeys;
 var trialMaxDuration;
 var trialComponents;
 function trialRoutineBegin(snapshot) {
@@ -749,19 +678,16 @@ function trialRoutineBegin(snapshot) {
     // update component parameters for each repeat
     // Run 'Begin Routine' code from trialCode
     psychoJS.eventManager.clearEvents();
+    trialText.setText("");
     words = idiom.split(" ");
     sentPos = 0;
     stimulus = words[sentPos];
     clock = new util.Clock();
     
-    trialKey.keys = undefined;
-    trialKey.rt = undefined;
-    _trialKey_allKeys = [];
     psychoJS.experiment.addData('trial.started', globalClock.getTime());
     trialMaxDuration = null
     // keep track of which components have finished
     trialComponents = [];
-    trialComponents.push(trialKey);
     trialComponents.push(trialText);
     
     trialComponents.forEach( function(thisComponent) {
@@ -784,15 +710,15 @@ function trialRoutineEachFrame() {
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     // Run 'Each Frame' code from trialCode
-    theseKeys = psychoJS.eventManager.getKeys(["space", "escape"]);
+    theseKeys = psychoJS.eventManager.getKeys({keyList:["space", "escape"]});
     n = theseKeys.length;
     i = 0;
     while ((n > i)) {
-        if ((theseKeys[i] === "escape")) {
+        if ((theseKeys[0] === "escape")) {
             quit();
             break;
         } else {
-            if ((theseKeys[i] === "space")) {
+            if ((theseKeys[0] === "space")) {
                 psychoJS.experiment.addData("readingTimes", clock.getTime());
                 psychoJS.experiment.addData("sentPos", sentPos);
                 psychoJS.experiment.addData("word", stimulus);
@@ -805,31 +731,10 @@ function trialRoutineEachFrame() {
                 }
                 stimulus = words[sentPos];
                 i += 1;
+            } else {
+                theseKeys = [];
             }
         }
-    }
-    
-    
-    // *trialKey* updates
-    if (t >= 0.0 && trialKey.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      trialKey.tStart = t;  // (not accounting for frame time here)
-      trialKey.frameNStart = frameN;  // exact frame index
-      
-      // keyboard checking is just starting
-      psychoJS.window.callOnFlip(function() { trialKey.clock.reset(); });  // t=0 on next screen flip
-      psychoJS.window.callOnFlip(function() { trialKey.start(); }); // start on screen flip
-      psychoJS.window.callOnFlip(function() { trialKey.clearEvents(); });
-    }
-    
-    if (trialKey.status === PsychoJS.Status.STARTED) {
-      let theseKeys = trialKey.getKeys({keyList: ['space'], waitRelease: false});
-      _trialKey_allKeys = _trialKey_allKeys.concat(theseKeys);
-      if (_trialKey_allKeys.length > 0) {
-        trialKey.keys = _trialKey_allKeys[_trialKey_allKeys.length - 1].name;  // just the last key pressed
-        trialKey.rt = _trialKey_allKeys[_trialKey_allKeys.length - 1].rt;
-        trialKey.duration = _trialKey_allKeys[_trialKey_allKeys.length - 1].duration;
-      }
     }
     
     
@@ -882,17 +787,6 @@ function trialRoutineEnd(snapshot) {
       }
     });
     psychoJS.experiment.addData('trial.stopped', globalClock.getTime());
-    // update the trial handler
-    if (currentLoop instanceof MultiStairHandler) {
-      currentLoop.addResponse(trialKey.corr, level);
-    }
-    psychoJS.experiment.addData('trialKey.keys', trialKey.keys);
-    if (typeof trialKey.keys !== 'undefined') {  // we had a response
-        psychoJS.experiment.addData('trialKey.rt', trialKey.rt);
-        psychoJS.experiment.addData('trialKey.duration', trialKey.duration);
-        }
-    
-    trialKey.stop();
     // the Routine "trial" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -912,7 +806,6 @@ var ans2;
 var ans3;
 var correct;
 var corrKey;
-var _questionKey_allKeys;
 var questionMaxDuration;
 var questionComponents;
 function questionRoutineBegin(snapshot) {
@@ -928,12 +821,35 @@ function questionRoutineBegin(snapshot) {
     questionMaxDurationReached = false;
     // update component parameters for each repeat
     // Run 'Begin Routine' code from questionCode
+    function setCorrKey(index) {
+        if ((index === 0)) {
+            corrKey = "a";
+        } else {
+            if ((index === 1)) {
+                corrKey = "b";
+            } else {
+                if ((index === 2)) {
+                    corrKey = "c";
+                }
+            }
+        }
+        return corrKey;
+    }
+    
+    // empty buffer
     psychoJS.eventManager.clearEvents();
+    questionText.setText("")
+    
+    // randomize multiple choice answer positions
     answers = [meaning_idiomatic, meaning_literal, meaning_distractor];
     util.shuffle(answers);
+    
+    // set answers for display in correct order
     ans1 = answers[0];
     ans2 = answers[1];
     ans3 = answers[2];
+    
+    // get index of correct answer
     if (((stimType === "experimental") || (stimType === "practice_e"))) {
         correct = util.index(answers, meaning_idiomatic);
     } else {
@@ -941,19 +857,16 @@ function questionRoutineBegin(snapshot) {
             correct = util.index(answers, meaning_literal);
         }
     }
+    
+    // set correct answer key
     corrKey = setCorrKey(correct);
     
     questionText.setPos([0, 0]);
-    questionText.setText((((((("***** Wat betekent deze zin? *****\n\n\n(a) " + ans1) + "\n\n(b) ") + ans2) + "\n\n(c) ") + ans3) + "\n\n\nKies je antwoord met (a), (b) of (c)"));
-    questionKey.keys = undefined;
-    questionKey.rt = undefined;
-    _questionKey_allKeys = [];
     psychoJS.experiment.addData('question.started', globalClock.getTime());
     questionMaxDuration = null
     // keep track of which components have finished
     questionComponents = [];
     questionComponents.push(questionText);
-    questionComponents.push(questionKey);
     
     questionComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
@@ -964,6 +877,8 @@ function questionRoutineBegin(snapshot) {
 }
 
 
+var participantAnswer;
+var questionCorrect;
 function questionRoutineEachFrame() {
   return async function () {
     //--- Loop for each frame of Routine 'question' ---
@@ -972,28 +887,61 @@ function questionRoutineEachFrame() {
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     // Run 'Each Frame' code from questionCode
-    theseKeys = psychoJS.eventManager.getKeys(["a", "b", "c", "escape"]);
+    function getParticipantAnswer(key, ansList) {
+        var answer;
+        if ((key === "a")) {
+            answer = ansList[0];
+        } else {
+            if ((key === "b")) {
+                answer = ansList[1];
+            } else {
+                if ((key === "c")) {
+                    answer = ansList[2];
+                }
+            }
+        }
+        if ((answer === meaning_idiomatic)) {
+            answer = "idiomatic";
+        }
+        if ((answer === meaning_distractor)) {
+            answer = "distractor";
+        }
+        if ((answer === meaning_literal)) {
+            answer = "literal";
+        }
+        return answer;
+    }
+    theseKeys = psychoJS.eventManager.getKeys({keyList:["a", "b", "c", "escape"]});
     n = theseKeys.length;
     i = 0;
+    participantAnswer = ""
+    questionCorrect = undefined
+    
     while ((n > i)) {
         if ((theseKeys[i] === "escape")) {
             quit();
             break;
         } else {
-            participantAnswer = getParticipantAnswer(theseKeys[i], answers);
-            if ((corrKey === theseKeys[i])) {
-                questionCorrect = 1;
-            } else {
-                questionCorrect = 0;
+            if ((((theseKeys[i] === "a") || (theseKeys[i] === "b")) || (theseKeys[i] === "c"))) {
+                participantAnswer = getParticipantAnswer(theseKeys[i], answers);
+                if ((corrKey === theseKeys[i])) {
+                    questionCorrect = 1;
+                } else {
+                    questionCorrect = 0;
+                }
+                psychoJS.experiment.addData("questionCorrect", questionCorrect);
+                psychoJS.experiment.addData("participantAnswer", participantAnswer);
+                psychoJS.experiment.nextEntry();
+                continueRoutine = false;
+                i += 1;
             }
-            psychoJS.experiment.addData("questionCorrect", questionCorrect);
-            psychoJS.experiment.addData("participantAnswer", participantAnswer);
-            psychoJS.experiment.nextEntry();
-            continueRoutine = false;
-            i += 1;
         }
     }
     
+    
+    if (questionText.status === PsychoJS.Status.STARTED){ // only update if being drawn
+      questionText.setText((((((("***** Wat betekent deze zin? *****\n\n\n(a) " + ans1) + "\n\n(b) ") + ans2) + "\n\n(c) ") + ans3) + "\n\n\nKies je antwoord met (a), (b) of (c)"), false);
+    }
     
     // *questionText* updates
     if (t >= 0.0 && questionText.status === PsychoJS.Status.NOT_STARTED) {
@@ -1002,29 +950,6 @@ function questionRoutineEachFrame() {
       questionText.frameNStart = frameN;  // exact frame index
       
       questionText.setAutoDraw(true);
-    }
-    
-    
-    // *questionKey* updates
-    if (t >= 0.0 && questionKey.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      questionKey.tStart = t;  // (not accounting for frame time here)
-      questionKey.frameNStart = frameN;  // exact frame index
-      
-      // keyboard checking is just starting
-      psychoJS.window.callOnFlip(function() { questionKey.clock.reset(); });  // t=0 on next screen flip
-      psychoJS.window.callOnFlip(function() { questionKey.start(); }); // start on screen flip
-      psychoJS.window.callOnFlip(function() { questionKey.clearEvents(); });
-    }
-    
-    if (questionKey.status === PsychoJS.Status.STARTED) {
-      let theseKeys = questionKey.getKeys({keyList: ['a', 'b', 'c'], waitRelease: false});
-      _questionKey_allKeys = _questionKey_allKeys.concat(theseKeys);
-      if (_questionKey_allKeys.length > 0) {
-        questionKey.keys = _questionKey_allKeys[_questionKey_allKeys.length - 1].name;  // just the last key pressed
-        questionKey.rt = _questionKey_allKeys[_questionKey_allKeys.length - 1].rt;
-        questionKey.duration = _questionKey_allKeys[_questionKey_allKeys.length - 1].duration;
-      }
     }
     
     // check for quit (typically the Esc key)
@@ -1063,17 +988,6 @@ function questionRoutineEnd(snapshot) {
       }
     });
     psychoJS.experiment.addData('question.stopped', globalClock.getTime());
-    // update the trial handler
-    if (currentLoop instanceof MultiStairHandler) {
-      currentLoop.addResponse(questionKey.corr, level);
-    }
-    psychoJS.experiment.addData('questionKey.keys', questionKey.keys);
-    if (typeof questionKey.keys !== 'undefined') {  // we had a response
-        psychoJS.experiment.addData('questionKey.rt', questionKey.rt);
-        psychoJS.experiment.addData('questionKey.duration', questionKey.duration);
-        }
-    
-    questionKey.stop();
     // the Routine "question" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
     
@@ -1524,8 +1438,39 @@ function endRoutineBegin(snapshot) {
     routineTimer.reset();
     endMaxDurationReached = false;
     // update component parameters for each repeat
-    // Run 'Begin Routine' code from codeEnd
-    /* Syntax Error: Fix Python code */
+    // Disable downloading results to browser
+    psychoJS._saveResults = 0;
+    
+    // Generate filename for results
+    let filename = expInfo["group"] + "_group_participant_" + expInfo["participant"] + "_" + psychoJS._experiment._experimentName + '_' + psychoJS._experiment._datetime + '.csv';
+    
+    // Extract data object from experiment
+    let dataObj = psychoJS._experiment._trialsData;
+    
+    // Convert data object to CSV
+    let data = [Object.keys(dataObj[0])].concat(dataObj).map(it => {
+            return Object.values(it).toString()
+        }).join('\n')
+    
+    // Send data to OSF via DataPipe
+    console.log('Saving data...');
+    fetch('https://pipe.jspsych.org/api/data', {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+            Accept: "*/*",
+        },
+        body: JSON.stringify({
+            experimentID: 'mTRdgdPYEvkD',
+            filename: filename,
+            data: data,
+        }),
+    }).then(response => response.json()).then(data => {
+        // Log response and force experiment end
+        console.log(data);
+        quitPsychoJS();
+    })
+    
     psychoJS.experiment.addData('end.started', globalClock.getTime());
     endMaxDuration = null
     // keep track of which components have finished

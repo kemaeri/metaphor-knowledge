@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on April 04, 2025, at 16:03
+    on April 05, 2025, at 14:09
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -43,8 +43,8 @@ psychopyVersion = '2024.2.4'
 expName = 'metaphors'  # from the Builder filename that created this script
 # information about this experiment
 expInfo = {
-    'participant': f"{randint(0, 999999):06.0f}",
-    'session': '001',
+    'participant': '',
+    'group': ["exp","con"],
     'date|hid': data.getDateStr(),
     'expName|hid': expName,
     'psychopyVersion|hid': psychopyVersion,
@@ -274,18 +274,6 @@ def setupDevices(expInfo, thisExp, win):
             deviceClass='keyboard',
             deviceName='keyWelcome',
         )
-    if deviceManager.getDevice('trialKey') is None:
-        # initialise trialKey
-        trialKey = deviceManager.addDevice(
-            deviceClass='keyboard',
-            deviceName='trialKey',
-        )
-    if deviceManager.getDevice('questionKey') is None:
-        # initialise questionKey
-        questionKey = deviceManager.addDevice(
-            deviceClass='keyboard',
-            deviceName='questionKey',
-        )
     if deviceManager.getDevice('keyStart') is None:
         # initialise keyStart
         keyStart = deviceManager.addDevice(
@@ -297,12 +285,6 @@ def setupDevices(expInfo, thisExp, win):
         pauseKey = deviceManager.addDevice(
             deviceClass='keyboard',
             deviceName='pauseKey',
-        )
-    if deviceManager.getDevice('keyEnd') is None:
-        # initialise keyEnd
-        keyEnd = deviceManager.addDevice(
-            deviceClass='keyboard',
-            deviceName='keyEnd',
         )
     # return True if completed successfully
     return True
@@ -425,45 +407,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         depth=0.0);
     
     # --- Initialize components for Routine "trial" ---
-    trialKey = keyboard.Keyboard(deviceName='trialKey')
     trialText = visual.TextStim(win=win, name='trialText',
         text='',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-2.0);
+        depth=-1.0);
     
     # --- Initialize components for Routine "question" ---
-    # Run 'Begin Experiment' code from questionCode
-    def setCorrKey(index):
-        if index == 0:
-            corrKey = 'a'
-        elif index == 1:
-            corrKey = 'b'
-        elif index == 2:
-            corrKey = 'c'
-        return corrKey
-            
-    def getParticipantAnswer(key,ansList):
-        # use input key to select chosen sentence
-        if key == 'a':
-            answer = ansList[0]
-        elif key == 'b':
-            answer = ansList[1]
-        elif key == 'c':
-            answer = ansList[2]
-        
-        # use chosen sentence to select sentence type
-        if answer == meaning_idiomatic:
-            answer = "idiomatic"
-        if answer == meaning_distractor:
-            answer = "distractor"
-        if answer == meaning_literal:
-            answer = "literal"    
-        return answer
-        
-        
     questionText = visual.TextStim(win=win, name='questionText',
         text='',
         font='Arial',
@@ -471,7 +423,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-1.0);
-    questionKey = keyboard.Keyboard(deviceName='questionKey')
     
     # --- Initialize components for Routine "feedback" ---
     fb = visual.TextStim(win=win, name='fb',
@@ -491,11 +442,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=0.0);
     keyStart = keyboard.Keyboard(deviceName='keyStart')
-    # Run 'Begin Experiment' code from alignStart
-    # Code components should usually appear at the top
-    # of the routine. This one has to appear after the
-    # text component it refers to.
-    textStart.alignText= 'center'
     
     # --- Initialize components for Routine "fix" ---
     fixation = visual.TextStim(win=win, name='fixation',
@@ -507,45 +453,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         depth=0.0);
     
     # --- Initialize components for Routine "trial" ---
-    trialKey = keyboard.Keyboard(deviceName='trialKey')
     trialText = visual.TextStim(win=win, name='trialText',
         text='',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-2.0);
+        depth=-1.0);
     
     # --- Initialize components for Routine "question" ---
-    # Run 'Begin Experiment' code from questionCode
-    def setCorrKey(index):
-        if index == 0:
-            corrKey = 'a'
-        elif index == 1:
-            corrKey = 'b'
-        elif index == 2:
-            corrKey = 'c'
-        return corrKey
-            
-    def getParticipantAnswer(key,ansList):
-        # use input key to select chosen sentence
-        if key == 'a':
-            answer = ansList[0]
-        elif key == 'b':
-            answer = ansList[1]
-        elif key == 'c':
-            answer = ansList[2]
-        
-        # use chosen sentence to select sentence type
-        if answer == meaning_idiomatic:
-            answer = "idiomatic"
-        if answer == meaning_distractor:
-            answer = "distractor"
-        if answer == meaning_literal:
-            answer = "literal"    
-        return answer
-        
-        
     questionText = visual.TextStim(win=win, name='questionText',
         text='',
         font='Arial',
@@ -553,7 +469,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-1.0);
-    questionKey = keyboard.Keyboard(deviceName='questionKey')
     
     # --- Initialize components for Routine "pause" ---
     # Run 'Begin Experiment' code from pauseCode
@@ -573,18 +488,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "end" ---
     textEnd = visual.TextStim(win=win, name='textEnd',
-        text='We zijn bij het einde van het experiment.\n\nBedankt voor het meedoen!\n\nDruk op de spatiebalk om af te sluiten.',
+        text='We zijn bij het einde van het experiment.\n\nBedankt voor het meedoen!\n\nDe data wordt nu opgeslagen. Nog even wachten...',
         font='Arial',
         units='norm', pos=(0, 0), draggable=False, height=0.1, wrapWidth=1.8, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=0.0);
-    keyEnd = keyboard.Keyboard(deviceName='keyEnd')
-    # Run 'Begin Experiment' code from alignEnd
-    # Code components should usually appear at the top
-    # of the routine. This one has to appear after the
-    # text component it refers to.
-    textEnd.alignText= 'center'
+        depth=-1.0);
     
     # create some handy timers
     
@@ -905,7 +814,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine trial
         trial = data.Routine(
             name='trial',
-            components=[trialKey, trialText],
+            components=[trialText],
         )
         trial.status = NOT_STARTED
         continueRoutine = True
@@ -913,7 +822,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # Run 'Begin Routine' code from trialCode
         # clear any previous keypresses
         event.clearEvents()
-        
+        trialText.setText("")
         # parse stimulus
         words = idiom.split(" ")
         
@@ -923,10 +832,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         # initiate clock
         clock = core.Clock()
-        # create starting attributes for trialKey
-        trialKey.keys = []
-        trialKey.rt = []
-        _trialKey_allKeys = []
         # store start times for trial
         trial.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
         trial.tStart = globalClock.getTime(format='float')
@@ -960,18 +865,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
             # Run 'Each Frame' code from trialCode
-            # listen for keys
             theseKeys = event.getKeys(["space","escape"])
             n = len(theseKeys)
             i = 0
             
             # action on keypress
             while n > i:
-                if theseKeys[i] == "escape":
+                if theseKeys[0] == "escape":
                     # break out of experiment when escape is pressed
                     quit()
                     break
-                elif theseKeys[i] == "space":
+                elif theseKeys[0] == "space":
                     thisExp.addData("readingTimes",clock.getTime())
                     thisExp.addData("sentPos", sentPos)
                     thisExp.addData("word", stimulus)
@@ -985,32 +889,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         break
                     stimulus = words[sentPos]
                     i += 1
-            
-            # *trialKey* updates
-            waitOnFlip = False
-            
-            # if trialKey is starting this frame...
-            if trialKey.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                trialKey.frameNStart = frameN  # exact frame index
-                trialKey.tStart = t  # local t and not account for scr refresh
-                trialKey.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(trialKey, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'trialKey.started')
-                # update status
-                trialKey.status = STARTED
-                # keyboard checking is just starting
-                waitOnFlip = True
-                win.callOnFlip(trialKey.clock.reset)  # t=0 on next screen flip
-                win.callOnFlip(trialKey.clearEvents, eventType='keyboard')  # clear events on next screen flip
-            if trialKey.status == STARTED and not waitOnFlip:
-                theseKeys = trialKey.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
-                _trialKey_allKeys.extend(theseKeys)
-                if len(_trialKey_allKeys):
-                    trialKey.keys = _trialKey_allKeys[-1].name  # just the last key pressed
-                    trialKey.rt = _trialKey_allKeys[-1].rt
-                    trialKey.duration = _trialKey_allKeys[-1].duration
+                else:
+                    theseKeys = []
             
             # *trialText* updates
             
@@ -1071,13 +951,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         trial.tStop = globalClock.getTime(format='float')
         trial.tStopRefresh = tThisFlipGlobal
         thisExp.addData('trial.stopped', trial.tStop)
-        # check responses
-        if trialKey.keys in ['', [], None]:  # No response was made
-            trialKey.keys = None
-        practice.addData('trialKey.keys',trialKey.keys)
-        if trialKey.keys != None:  # we had a response
-            practice.addData('trialKey.rt', trialKey.rt)
-            practice.addData('trialKey.duration', trialKey.duration)
         # the Routine "trial" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         
@@ -1085,12 +958,22 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine question
         question = data.Routine(
             name='question',
-            components=[questionText, questionKey],
+            components=[questionText],
         )
         question.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
         # Run 'Begin Routine' code from questionCode
+        # functions
+        def setCorrKey(index):
+            if index == 0:
+                corrKey = 'a'
+            elif index == 1:
+                corrKey = 'b'
+            elif index == 2:
+                corrKey = 'c'
+            return corrKey
+                
         # empty buffer
         event.clearEvents()
         
@@ -1121,11 +1004,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         
         questionText.setPos((0, 0))
-        questionText.setText('***** Wat betekent deze zin? *****\n\n\n(a) ' + ans1 + '\n\n(b) ' + ans2 + '\n\n(c) ' + ans3 + '\n\n\nKies je antwoord met (a), (b) of (c)')
-        # create starting attributes for questionKey
-        questionKey.keys = []
-        questionKey.rt = []
-        _questionKey_allKeys = []
         # store start times for question
         question.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
         question.tStart = globalClock.getTime(format='float')
@@ -1159,6 +1037,25 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
             # Run 'Each Frame' code from questionCode
+            # functions
+            def getParticipantAnswer(key,ansList):
+                # use input key to select chosen sentence
+                if key == 'a':
+                    answer = ansList[0]
+                elif key == 'b':
+                    answer = ansList[1]
+                elif key == 'c':
+                    answer = ansList[2]
+                
+                # use chosen sentence to select sentence type
+                if answer == meaning_idiomatic:
+                    answer = "idiomatic"
+                if answer == meaning_distractor:
+                    answer = "distractor"
+                if answer == meaning_literal:
+                    answer = "literal"    
+                return answer
+                
             # evaluate correctness of given response
             theseKeys = event.getKeys(['a','b','c','escape'])
             n = len(theseKeys)
@@ -1170,7 +1067,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # break out of experiment when escape is pressed
                     quit()
                     break
-                else:
+                elif theseKeys[i] == "a" or theseKeys[i] == "b" or theseKeys[i] == "c":
                     participantAnswer = getParticipantAnswer(theseKeys[i],answers)
                     if corrKey == theseKeys[i]:
                         questionCorrect = 1
@@ -1200,33 +1097,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # if questionText is active this frame...
             if questionText.status == STARTED:
                 # update params
-                pass
-            
-            # *questionKey* updates
-            waitOnFlip = False
-            
-            # if questionKey is starting this frame...
-            if questionKey.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                questionKey.frameNStart = frameN  # exact frame index
-                questionKey.tStart = t  # local t and not account for scr refresh
-                questionKey.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(questionKey, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'questionKey.started')
-                # update status
-                questionKey.status = STARTED
-                # keyboard checking is just starting
-                waitOnFlip = True
-                win.callOnFlip(questionKey.clock.reset)  # t=0 on next screen flip
-                win.callOnFlip(questionKey.clearEvents, eventType='keyboard')  # clear events on next screen flip
-            if questionKey.status == STARTED and not waitOnFlip:
-                theseKeys = questionKey.getKeys(keyList=['a','b','c'], ignoreKeys=["escape"], waitRelease=False)
-                _questionKey_allKeys.extend(theseKeys)
-                if len(_questionKey_allKeys):
-                    questionKey.keys = _questionKey_allKeys[-1].name  # just the last key pressed
-                    questionKey.rt = _questionKey_allKeys[-1].rt
-                    questionKey.duration = _questionKey_allKeys[-1].duration
+                questionText.setText('***** Wat betekent deze zin? *****\n\n\n(a) ' + ans1 + '\n\n(b) ' + ans2 + '\n\n(c) ' + ans3 + '\n\n\nKies je antwoord met (a), (b) of (c)', log=False)
             
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1267,13 +1138,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         question.tStop = globalClock.getTime(format='float')
         question.tStopRefresh = tThisFlipGlobal
         thisExp.addData('question.stopped', question.tStop)
-        # check responses
-        if questionKey.keys in ['', [], None]:  # No response was made
-            questionKey.keys = None
-        practice.addData('questionKey.keys',questionKey.keys)
-        if questionKey.keys != None:  # we had a response
-            practice.addData('questionKey.rt', questionKey.rt)
-            practice.addData('questionKey.duration', questionKey.duration)
         # the Routine "question" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         
@@ -1726,7 +1590,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine trial
         trial = data.Routine(
             name='trial',
-            components=[trialKey, trialText],
+            components=[trialText],
         )
         trial.status = NOT_STARTED
         continueRoutine = True
@@ -1734,7 +1598,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # Run 'Begin Routine' code from trialCode
         # clear any previous keypresses
         event.clearEvents()
-        
+        trialText.setText("")
         # parse stimulus
         words = idiom.split(" ")
         
@@ -1744,10 +1608,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         # initiate clock
         clock = core.Clock()
-        # create starting attributes for trialKey
-        trialKey.keys = []
-        trialKey.rt = []
-        _trialKey_allKeys = []
         # store start times for trial
         trial.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
         trial.tStart = globalClock.getTime(format='float')
@@ -1781,18 +1641,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
             # Run 'Each Frame' code from trialCode
-            # listen for keys
             theseKeys = event.getKeys(["space","escape"])
             n = len(theseKeys)
             i = 0
             
             # action on keypress
             while n > i:
-                if theseKeys[i] == "escape":
+                if theseKeys[0] == "escape":
                     # break out of experiment when escape is pressed
                     quit()
                     break
-                elif theseKeys[i] == "space":
+                elif theseKeys[0] == "space":
                     thisExp.addData("readingTimes",clock.getTime())
                     thisExp.addData("sentPos", sentPos)
                     thisExp.addData("word", stimulus)
@@ -1806,32 +1665,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         break
                     stimulus = words[sentPos]
                     i += 1
-            
-            # *trialKey* updates
-            waitOnFlip = False
-            
-            # if trialKey is starting this frame...
-            if trialKey.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                trialKey.frameNStart = frameN  # exact frame index
-                trialKey.tStart = t  # local t and not account for scr refresh
-                trialKey.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(trialKey, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'trialKey.started')
-                # update status
-                trialKey.status = STARTED
-                # keyboard checking is just starting
-                waitOnFlip = True
-                win.callOnFlip(trialKey.clock.reset)  # t=0 on next screen flip
-                win.callOnFlip(trialKey.clearEvents, eventType='keyboard')  # clear events on next screen flip
-            if trialKey.status == STARTED and not waitOnFlip:
-                theseKeys = trialKey.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
-                _trialKey_allKeys.extend(theseKeys)
-                if len(_trialKey_allKeys):
-                    trialKey.keys = _trialKey_allKeys[-1].name  # just the last key pressed
-                    trialKey.rt = _trialKey_allKeys[-1].rt
-                    trialKey.duration = _trialKey_allKeys[-1].duration
+                else:
+                    theseKeys = []
             
             # *trialText* updates
             
@@ -1892,13 +1727,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         trial.tStop = globalClock.getTime(format='float')
         trial.tStopRefresh = tThisFlipGlobal
         thisExp.addData('trial.stopped', trial.tStop)
-        # check responses
-        if trialKey.keys in ['', [], None]:  # No response was made
-            trialKey.keys = None
-        trials.addData('trialKey.keys',trialKey.keys)
-        if trialKey.keys != None:  # we had a response
-            trials.addData('trialKey.rt', trialKey.rt)
-            trials.addData('trialKey.duration', trialKey.duration)
         # the Routine "trial" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         
@@ -1906,12 +1734,22 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine question
         question = data.Routine(
             name='question',
-            components=[questionText, questionKey],
+            components=[questionText],
         )
         question.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
         # Run 'Begin Routine' code from questionCode
+        # functions
+        def setCorrKey(index):
+            if index == 0:
+                corrKey = 'a'
+            elif index == 1:
+                corrKey = 'b'
+            elif index == 2:
+                corrKey = 'c'
+            return corrKey
+                
         # empty buffer
         event.clearEvents()
         
@@ -1942,11 +1780,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         
         questionText.setPos((0, 0))
-        questionText.setText('***** Wat betekent deze zin? *****\n\n\n(a) ' + ans1 + '\n\n(b) ' + ans2 + '\n\n(c) ' + ans3 + '\n\n\nKies je antwoord met (a), (b) of (c)')
-        # create starting attributes for questionKey
-        questionKey.keys = []
-        questionKey.rt = []
-        _questionKey_allKeys = []
         # store start times for question
         question.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
         question.tStart = globalClock.getTime(format='float')
@@ -1980,6 +1813,25 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
             # Run 'Each Frame' code from questionCode
+            # functions
+            def getParticipantAnswer(key,ansList):
+                # use input key to select chosen sentence
+                if key == 'a':
+                    answer = ansList[0]
+                elif key == 'b':
+                    answer = ansList[1]
+                elif key == 'c':
+                    answer = ansList[2]
+                
+                # use chosen sentence to select sentence type
+                if answer == meaning_idiomatic:
+                    answer = "idiomatic"
+                if answer == meaning_distractor:
+                    answer = "distractor"
+                if answer == meaning_literal:
+                    answer = "literal"    
+                return answer
+                
             # evaluate correctness of given response
             theseKeys = event.getKeys(['a','b','c','escape'])
             n = len(theseKeys)
@@ -1991,7 +1843,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # break out of experiment when escape is pressed
                     quit()
                     break
-                else:
+                elif theseKeys[i] == "a" or theseKeys[i] == "b" or theseKeys[i] == "c":
                     participantAnswer = getParticipantAnswer(theseKeys[i],answers)
                     if corrKey == theseKeys[i]:
                         questionCorrect = 1
@@ -2021,33 +1873,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # if questionText is active this frame...
             if questionText.status == STARTED:
                 # update params
-                pass
-            
-            # *questionKey* updates
-            waitOnFlip = False
-            
-            # if questionKey is starting this frame...
-            if questionKey.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                questionKey.frameNStart = frameN  # exact frame index
-                questionKey.tStart = t  # local t and not account for scr refresh
-                questionKey.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(questionKey, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'questionKey.started')
-                # update status
-                questionKey.status = STARTED
-                # keyboard checking is just starting
-                waitOnFlip = True
-                win.callOnFlip(questionKey.clock.reset)  # t=0 on next screen flip
-                win.callOnFlip(questionKey.clearEvents, eventType='keyboard')  # clear events on next screen flip
-            if questionKey.status == STARTED and not waitOnFlip:
-                theseKeys = questionKey.getKeys(keyList=['a','b','c'], ignoreKeys=["escape"], waitRelease=False)
-                _questionKey_allKeys.extend(theseKeys)
-                if len(_questionKey_allKeys):
-                    questionKey.keys = _questionKey_allKeys[-1].name  # just the last key pressed
-                    questionKey.rt = _questionKey_allKeys[-1].rt
-                    questionKey.duration = _questionKey_allKeys[-1].duration
+                questionText.setText('***** Wat betekent deze zin? *****\n\n\n(a) ' + ans1 + '\n\n(b) ' + ans2 + '\n\n(c) ' + ans3 + '\n\n\nKies je antwoord met (a), (b) of (c)', log=False)
             
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2088,13 +1914,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         question.tStop = globalClock.getTime(format='float')
         question.tStopRefresh = tThisFlipGlobal
         thisExp.addData('question.stopped', question.tStop)
-        # check responses
-        if questionKey.keys in ['', [], None]:  # No response was made
-            questionKey.keys = None
-        trials.addData('questionKey.keys',questionKey.keys)
-        if questionKey.keys != None:  # we had a response
-            trials.addData('questionKey.rt', questionKey.rt)
-            trials.addData('questionKey.duration', questionKey.duration)
         # the Routine "question" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         
@@ -2259,15 +2078,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # create an object to store info about Routine end
     end = data.Routine(
         name='end',
-        components=[textEnd, keyEnd],
+        components=[textEnd],
     )
     end.status = NOT_STARTED
     continueRoutine = True
     # update component parameters for each repeat
-    # create starting attributes for keyEnd
-    keyEnd.keys = []
-    keyEnd.rt = []
-    _keyEnd_allKeys = []
     # store start times for end
     end.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
     end.tStart = globalClock.getTime(format='float')
@@ -2316,34 +2131,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # update params
             pass
         
-        # *keyEnd* updates
-        waitOnFlip = False
-        
-        # if keyEnd is starting this frame...
-        if keyEnd.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-            # keep track of start time/frame for later
-            keyEnd.frameNStart = frameN  # exact frame index
-            keyEnd.tStart = t  # local t and not account for scr refresh
-            keyEnd.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(keyEnd, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'keyEnd.started')
-            # update status
-            keyEnd.status = STARTED
-            # keyboard checking is just starting
-            waitOnFlip = True
-            win.callOnFlip(keyEnd.clock.reset)  # t=0 on next screen flip
-            win.callOnFlip(keyEnd.clearEvents, eventType='keyboard')  # clear events on next screen flip
-        if keyEnd.status == STARTED and not waitOnFlip:
-            theseKeys = keyEnd.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
-            _keyEnd_allKeys.extend(theseKeys)
-            if len(_keyEnd_allKeys):
-                keyEnd.keys = _keyEnd_allKeys[0].name  # just the first key pressed
-                keyEnd.rt = _keyEnd_allKeys[0].rt
-                keyEnd.duration = _keyEnd_allKeys[0].duration
-                # a response ends the routine
-                continueRoutine = False
-        
         # check for quit (typically the Esc key)
         if defaultKeyboard.getKeys(keyList=["escape"]):
             thisExp.status = FINISHED
@@ -2383,13 +2170,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     end.tStop = globalClock.getTime(format='float')
     end.tStopRefresh = tThisFlipGlobal
     thisExp.addData('end.stopped', end.tStop)
-    # check responses
-    if keyEnd.keys in ['', [], None]:  # No response was made
-        keyEnd.keys = None
-    thisExp.addData('keyEnd.keys',keyEnd.keys)
-    if keyEnd.keys != None:  # we had a response
-        thisExp.addData('keyEnd.rt', keyEnd.rt)
-        thisExp.addData('keyEnd.duration', keyEnd.duration)
     thisExp.nextEntry()
     # the Routine "end" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
