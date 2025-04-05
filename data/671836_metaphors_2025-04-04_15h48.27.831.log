@@ -1,0 +1,960 @@
+4.7640 	WARNING 	Requested audio device 'Speakers (Lenovo USB Audio)' that is not available on this hardware. The 'audioDevice' preference should be one of ['Speakers (Realtek(R) Audio)']
+9.2063 	DEBUG 	Fullscreen settings ignored as running in pilot mode.
+9.2076 	INFO 	Loaded monitor calibration from ['2025_03_12 16:44']
+9.7217 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000015CAAD16890>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000015CAAD16830>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000015CAADA3700>, multiSample=False, name='window1', numSamples=2, pos=[560.0, 240.0], screen=0, size=array([800, 600]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+9.7218 	EXP 	window1: backgroundImage = ''
+9.7218 	EXP 	window1: backgroundFit = 'none'
+9.7376 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.7394 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.7413 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.7437 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.7460 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.7471 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.7488 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.7512 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.7519 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.7527 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.7545 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.7563 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.7582 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.7602 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.7619 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.7638 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.7656 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.7666 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.7677 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.7700 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.7710 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.7717 	DEBUG 	Uploading Texture Font fontname to graphics card
+9.7736 	DEBUG 	Upload of Texture Font fontname complete
+9.7880 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.7907 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.7929 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+9.7935 	DEBUG 	Uploading Texture Font fontname to graphics card
+9.7940 	DEBUG 	Upload of Texture Font fontname complete
+9.7980 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+9.7980 	EXP 	window1: recordFrameIntervals = False
+9.9924 	EXP 	window1: recordFrameIntervals = True
+10.2090 	EXP 	Screen (0) actual frame rate measured at 59.58Hz
+10.2090 	EXP 	window1: recordFrameIntervals = False
+10.2209 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+10.2224 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+10.2246 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+10.2274 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+10.2299 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+10.2325 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+10.2337 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+10.2359 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+10.2385 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+10.2409 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+10.2416 	DEBUG 	Uploading Texture Font fontname to graphics card
+10.2427 	DEBUG 	Upload of Texture Font fontname complete
+10.2700 	WARNING 	launchHubServer: If using the iohub mouse or eyetracker devices, fullScr should be True.
+15.3553 	INFO 	keyboard.Keyboard is using iohub backend.
+15.3554 	INFO 	keyboard.Keyboard is using iohub backend.
+15.3555 	INFO 	keyboard.Keyboard is using iohub backend.
+15.3555 	INFO 	keyboard.Keyboard is using iohub backend.
+15.3556 	INFO 	keyboard.Keyboard is using iohub backend.
+15.3557 	INFO 	keyboard.Keyboard is using iohub backend.
+15.3557 	INFO 	keyboard.Keyboard is using iohub backend.
+15.3558 	EXP 	metaphors: status = STARTED
+15.5422 	EXP 	Created textWelcome = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='textWelcome', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.8)
+15.5517 	EXP 	Created fixation = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='fixation', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+15.5532 	EXP 	Created trialText = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='trialText', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+15.5546 	EXP 	Created questionText = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='questionText', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+15.5560 	EXP 	Created fb = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='fb', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+15.5718 	EXP 	Created textStart = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='textStart', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.8)
+15.5754 	EXP 	Created fixation = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='fixation', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+15.5769 	EXP 	Created trialText = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='trialText', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+15.5783 	EXP 	Created questionText = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='questionText', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+15.5797 	EXP 	Created pauseText = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='pauseText', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+15.5919 	EXP 	Created textEnd = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='textEnd', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.8)
+0.0144 	EXP 	textStart: alignText = 'center'
+0.0144 	EXP 	textEnd: alignText = 'center'
+0.0331 	INFO 	Keyboard events cleared
+0.0325 	EXP 	textWelcome: autoDraw = True
+6.3856 	DEBUG 	Read excel file with openpyxl: resources/practiceStimuli.xlsx
+6.3868 	EXP 	Imported resources/practiceStimuli.xlsx as conditions, 4 conditions, 7 params
+6.3873 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'stimID': 'c', 'stimType': 'practice_f', 'transparent': 1, 'idiom': 'Hannah staat met haar mond vol brood.', 'meaning_idiomatic': 'Hannah weet niet wat ze moet zeggen.', 'meaning_literal': 'Hannah heeft haar mond vol met brood.', 'meaning_distractor': 'Hannah is gulzig en eet veel.', 'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+6.3907 	DATA 	Keypress: space
+6.3986 	EXP 	textWelcome: autoDraw = False
+6.3986 	EXP 	fixation: autoDraw = True
+7.3987 	INFO 	Keyboard events cleared
+7.3981 	EXP 	fixation: autoDraw = False
+7.3981 	EXP 	trialText: autoDraw = True
+8.3362 	DATA 	Keypress: space
+8.9027 	DATA 	Keypress: space
+9.6528 	DATA 	Keypress: space
+10.2529 	DATA 	Keypress: space
+10.9857 	DATA 	Keypress: space
+11.7358 	DATA 	Keypress: space
+12.4700 	DATA 	Keypress: space
+12.4986 	INFO 	Keyboard events cleared
+12.4980 	EXP 	trialText: autoDraw = False
+12.4980 	EXP 	questionText: height = 0.05
+12.4980 	EXP 	questionText: height = 0.05
+12.4980 	EXP 	questionText: height = 0.05
+12.4980 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Hannah weet niet wat ze moet zeggen.\n\n(b) Hannah is gulzig en eet veel.\n\n(c) Hannah heeft haar mond vol met brood.\n\n\nKies je antwoord met (a), (b) of (c)'
+12.4980 	EXP 	questionText: autoDraw = True
+20.1860 	DATA 	Keypress: c
+20.1981 	EXP 	questionText: autoDraw = False
+20.1981 	EXP 	fb: foreColor = <psychopy.colors.Color: green, alpha=1.0>
+20.1981 	EXP 	fb: height = 0.1
+20.1981 	EXP 	fb: height = 0.1
+20.1981 	EXP 	fb: height = 0.1
+20.1981 	EXP 	fb: text = 'O'
+20.1981 	EXP 	fb: autoDraw = True
+21.1866 	EXP 	New trial (rep=0, index=1): <Trial 1 (1 in rep 0) data={'stimID': 'd', 'stimType': 'practice_f', 'transparent': 0, 'idiom': 'Leon zit in de bus.', 'meaning_idiomatic': 'Leon is somber.', 'meaning_literal': 'Leon is onderweg met de bus.', 'meaning_distractor': 'Leon wacht rustig af wat er gaat gebeuren.', 'thisN': 1, 'thisTrialN': 1, 'thisRepN': 0}>
+21.1980 	EXP 	fb: autoDraw = False
+21.1980 	EXP 	fb: autoDraw = False
+21.1980 	EXP 	fixation: autoDraw = True
+22.1986 	INFO 	Keyboard events cleared
+22.1981 	EXP 	fixation: autoDraw = False
+22.1981 	EXP 	fixation: autoDraw = False
+22.1981 	EXP 	trialText: autoDraw = True
+22.6524 	DATA 	Keypress: space
+23.2026 	DATA 	Keypress: space
+23.7380 	DATA 	Keypress: space
+24.3358 	DATA 	Keypress: space
+25.1359 	DATA 	Keypress: space
+25.1643 	INFO 	Keyboard events cleared
+25.1638 	EXP 	trialText: autoDraw = False
+25.1638 	EXP 	questionText: height = 0.05
+25.1638 	EXP 	questionText: height = 0.05
+25.1638 	EXP 	questionText: height = 0.05
+25.1638 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Leon is onderweg met de bus.\n\n(b) Leon wacht rustig af wat er gaat gebeuren.\n\n(c) Leon is somber.\n\n\nKies je antwoord met (a), (b) of (c)'
+25.1638 	EXP 	questionText: autoDraw = True
+30.1860 	DATA 	Keypress: a
+30.1982 	EXP 	questionText: autoDraw = False
+30.1982 	EXP 	fb: foreColor = <psychopy.colors.Color: green, alpha=1.0>
+30.1982 	EXP 	fb: text = 'O'
+30.1982 	EXP 	fb: autoDraw = True
+31.1854 	EXP 	New trial (rep=0, index=2): <Trial 2 (2 in rep 0) data={'stimID': 'b', 'stimType': 'practice_e', 'transparent': 0, 'idiom': 'Tom heeft veel in zijn mars.', 'meaning_idiomatic': 'Tom kan en weet veel dingen.', 'meaning_literal': 'Tom kan heel ver wandelen.', 'meaning_distractor': 'Tom praat veel.', 'thisN': 2, 'thisTrialN': 2, 'thisRepN': 0}>
+31.1977 	EXP 	fb: autoDraw = False
+31.1977 	EXP 	fb: autoDraw = False
+31.1977 	EXP 	fixation: autoDraw = True
+32.1981 	INFO 	Keyboard events cleared
+32.1976 	EXP 	fixation: autoDraw = False
+32.1976 	EXP 	fixation: autoDraw = False
+32.1976 	EXP 	trialText: autoDraw = True
+32.7031 	DATA 	Keypress: space
+33.4692 	DATA 	Keypress: space
+33.9520 	DATA 	Keypress: space
+34.5050 	DATA 	Keypress: space
+34.8532 	DATA 	Keypress: space
+35.3020 	DATA 	Keypress: space
+35.3312 	INFO 	Keyboard events cleared
+35.3306 	EXP 	trialText: autoDraw = False
+35.3306 	EXP 	questionText: height = 0.05
+35.3306 	EXP 	questionText: height = 0.05
+35.3306 	EXP 	questionText: height = 0.05
+35.3306 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Tom kan heel ver wandelen.\n\n(b) Tom kan en weet veel dingen.\n\n(c) Tom praat veel.\n\n\nKies je antwoord met (a), (b) of (c)'
+35.3306 	EXP 	questionText: autoDraw = True
+38.1195 	DATA 	Keypress: b
+38.1309 	EXP 	questionText: autoDraw = False
+38.1309 	EXP 	fb: foreColor = <psychopy.colors.Color: green, alpha=1.0>
+38.1309 	EXP 	fb: text = 'O'
+38.1309 	EXP 	fb: autoDraw = True
+39.1196 	EXP 	New trial (rep=0, index=3): <Trial 3 (3 in rep 0) data={'stimID': 'a', 'stimType': 'practice_e', 'transparent': 1, 'idiom': 'Laura schopt het ver.', 'meaning_idiomatic': 'Laura is succesvol.', 'meaning_literal': 'Laura schopt iets ver weg.', 'meaning_distractor': 'Laura overtreedt een regel.', 'thisN': 3, 'thisTrialN': 3, 'thisRepN': 0}>
+39.1312 	EXP 	fb: autoDraw = False
+39.1312 	EXP 	fb: autoDraw = False
+39.1312 	EXP 	fixation: autoDraw = True
+40.1316 	INFO 	Keyboard events cleared
+40.1310 	EXP 	fixation: autoDraw = False
+40.1310 	EXP 	fixation: autoDraw = False
+40.1310 	EXP 	trialText: autoDraw = True
+40.9188 	DATA 	Keypress: space
+41.3045 	DATA 	Keypress: space
+41.8525 	DATA 	Keypress: space
+42.7350 	DATA 	Keypress: space
+42.7645 	INFO 	Keyboard events cleared
+42.7640 	EXP 	trialText: autoDraw = False
+42.7640 	EXP 	questionText: height = 0.05
+42.7640 	EXP 	questionText: height = 0.05
+42.7640 	EXP 	questionText: height = 0.05
+42.7640 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Laura overtreedt een regel.\n\n(b) Laura schopt iets ver weg.\n\n(c) Laura is succesvol.\n\n\nKies je antwoord met (a), (b) of (c)'
+42.7640 	EXP 	questionText: autoDraw = True
+46.8190 	DATA 	Keypress: c
+46.8315 	EXP 	questionText: autoDraw = False
+46.8315 	EXP 	fb: foreColor = <psychopy.colors.Color: green, alpha=1.0>
+46.8315 	EXP 	fb: text = 'O'
+46.8315 	EXP 	fb: autoDraw = True
+47.8474 	INFO 	Keyboard events cleared
+47.8469 	EXP 	fb: autoDraw = False
+47.8469 	EXP 	fb: autoDraw = False
+47.8469 	EXP 	textStart: autoDraw = True
+47.8469 	EXP 	textStart: height = 0.1
+47.8469 	EXP 	textStart: height = 0.1
+47.8469 	EXP 	textStart: height = 0.1
+47.8469 	EXP 	textStart: text = 'Goed gedaan!\n\nNu je weet hoe het werkt, gaan we echt beginnen.\n\nVeel succes!\n\nDruk op de spatiebalk om verder te gaan'
+49.3009 	DEBUG 	Read excel file with openpyxl: resources/idiomStimuli.xlsx
+49.3078 	EXP 	Imported resources/idiomStimuli.xlsx as conditions, 32 conditions, 7 params
+49.3086 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'stimID': 3, 'stimType': 'experimental', 'transparent': 1, 'idiom': 'Noah zet er een punt achter.', 'meaning_idiomatic': 'Noah stopt ermee.', 'meaning_literal': 'Noah zet een punt aan het eind van de zin.', 'meaning_distractor': 'Noah let goed op de details.', 'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+49.3108 	DATA 	Keypress: space
+49.3305 	EXP 	textStart: autoDraw = False
+49.3305 	EXP 	fixation: autoDraw = True
+50.2984 	INFO 	Keyboard events cleared
+50.2977 	EXP 	fixation: autoDraw = False
+50.2977 	EXP 	trialText: autoDraw = True
+51.2187 	DATA 	Keypress: space
+51.9370 	DATA 	Keypress: space
+52.4358 	DATA 	Keypress: space
+53.0520 	DATA 	Keypress: space
+53.7521 	DATA 	Keypress: space
+54.3851 	DATA 	Keypress: space
+54.4141 	INFO 	Keyboard events cleared
+54.4135 	EXP 	trialText: autoDraw = False
+54.4135 	EXP 	questionText: height = 0.05
+54.4135 	EXP 	questionText: height = 0.05
+54.4135 	EXP 	questionText: height = 0.05
+54.4135 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Noah let goed op de details.\n\n(b) Noah stopt ermee.\n\n(c) Noah zet een punt aan het eind van de zin.\n\n\nKies je antwoord met (a), (b) of (c)'
+54.4135 	EXP 	questionText: autoDraw = True
+59.1038 	DATA 	Keypress: a
+59.1299 	EXP 	New trial (rep=0, index=1): <Trial 1 (1 in rep 0) data={'stimID': 17, 'stimType': 'filler', 'transparent': 1, 'idiom': 'Eva wordt spelend rijk.', 'meaning_idiomatic': 'Eva verdient veel geld, zonder dat ze veel hoeft te doen.', 'meaning_literal': 'Eva verdient geld door spellen te spelen.', 'meaning_distractor': 'Eva verdient geld met een leuke baan.', 'thisN': 1, 'thisTrialN': 1, 'thisRepN': 0}>
+59.1465 	EXP 	questionText: autoDraw = False
+59.1465 	EXP 	pauseText: height = 0.05
+59.1465 	EXP 	pauseText: height = 0.05
+59.1465 	EXP 	pauseText: height = 0.05
+59.1465 	EXP 	pauseText: text = 'Dit was blok 0 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+59.1465 	EXP 	pauseText: autoDraw = False
+59.1465 	EXP 	fixation: autoDraw = True
+60.1482 	INFO 	Keyboard events cleared
+60.1475 	EXP 	fixation: autoDraw = False
+60.1475 	EXP 	trialText: autoDraw = True
+60.7351 	DATA 	Keypress: space
+61.4356 	DATA 	Keypress: space
+61.8854 	DATA 	Keypress: space
+62.5017 	DATA 	Keypress: space
+62.5307 	INFO 	Keyboard events cleared
+62.5302 	EXP 	trialText: autoDraw = False
+62.5302 	EXP 	questionText: height = 0.05
+62.5302 	EXP 	questionText: height = 0.05
+62.5302 	EXP 	questionText: height = 0.05
+62.5302 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Eva verdient geld door spellen te spelen.\n\n(b) Eva verdient veel geld, zonder dat ze veel hoeft te doen.\n\n(c) Eva verdient geld met een leuke baan.\n\n\nKies je antwoord met (a), (b) of (c)'
+62.5302 	EXP 	questionText: autoDraw = True
+72.7347 	DATA 	Keypress: c
+72.7362 	EXP 	New trial (rep=0, index=2): <Trial 2 (2 in rep 0) data={'stimID': 28, 'stimType': 'filler', 'transparent': 0, 'idiom': 'Floris struikelt over zijn veters.', 'meaning_idiomatic': 'Floris stottert doordat hij te snel spreekt.', 'meaning_literal': 'Floris valt omdat zijn veter los zitten.', 'meaning_distractor': 'Floris is erg onhandig.', 'thisN': 2, 'thisTrialN': 2, 'thisRepN': 0}>
+72.7469 	EXP 	questionText: autoDraw = False
+72.7469 	EXP 	pauseText: text = 'Dit was blok 0 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+72.7469 	EXP 	pauseText: autoDraw = False
+72.7469 	EXP 	fixation: autoDraw = True
+73.7477 	INFO 	Keyboard events cleared
+73.7472 	EXP 	fixation: autoDraw = False
+73.7472 	EXP 	fixation: autoDraw = False
+73.7472 	EXP 	trialText: autoDraw = True
+74.1012 	DATA 	Keypress: space
+74.6012 	DATA 	Keypress: space
+75.0852 	DATA 	Keypress: space
+75.5360 	DATA 	Keypress: space
+76.0852 	DATA 	Keypress: space
+76.1133 	INFO 	Keyboard events cleared
+76.1127 	EXP 	trialText: autoDraw = False
+76.1127 	EXP 	questionText: height = 0.05
+76.1127 	EXP 	questionText: height = 0.05
+76.1127 	EXP 	questionText: height = 0.05
+76.1127 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Floris is erg onhandig.\n\n(b) Floris valt omdat zijn veter los zitten.\n\n(c) Floris stottert doordat hij te snel spreekt.\n\n\nKies je antwoord met (a), (b) of (c)'
+76.1127 	EXP 	questionText: autoDraw = True
+77.5184 	DATA 	Keypress: a
+77.5201 	EXP 	New trial (rep=0, index=3): <Trial 3 (3 in rep 0) data={'stimID': 10, 'stimType': 'experimental', 'transparent': 0, 'idiom': 'Nora loopt naast haar schoenen.', 'meaning_idiomatic': 'Nora gedraagt zich arrogant.', 'meaning_literal': 'Nora loopt op haar blote voeten.', 'meaning_distractor': 'Nora doet iets wat ze eigenlijk niet kan.', 'thisN': 3, 'thisTrialN': 3, 'thisRepN': 0}>
+77.5302 	EXP 	questionText: autoDraw = False
+77.5302 	EXP 	pauseText: text = 'Dit was blok 0 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+77.5302 	EXP 	pauseText: autoDraw = False
+77.5302 	EXP 	fixation: autoDraw = True
+78.5307 	INFO 	Keyboard events cleared
+78.5303 	EXP 	fixation: autoDraw = False
+78.5303 	EXP 	fixation: autoDraw = False
+78.5303 	EXP 	trialText: autoDraw = True
+79.0845 	DATA 	Keypress: space
+79.6682 	DATA 	Keypress: space
+80.1851 	DATA 	Keypress: space
+80.6345 	DATA 	Keypress: space
+81.1511 	DATA 	Keypress: space
+81.1808 	INFO 	Keyboard events cleared
+81.1802 	EXP 	trialText: autoDraw = False
+81.1802 	EXP 	questionText: height = 0.05
+81.1802 	EXP 	questionText: height = 0.05
+81.1802 	EXP 	questionText: height = 0.05
+81.1802 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Nora loopt op haar blote voeten.\n\n(b) Nora doet iets wat ze eigenlijk niet kan.\n\n(c) Nora gedraagt zich arrogant.\n\n\nKies je antwoord met (a), (b) of (c)'
+81.1802 	EXP 	questionText: autoDraw = True
+83.0182 	DATA 	Keypress: c
+83.0199 	EXP 	New trial (rep=0, index=4): <Trial 4 (4 in rep 0) data={'stimID': 19, 'stimType': 'filler', 'transparent': 1, 'idiom': 'Klaas verraadt hem voor geen cent.', 'meaning_idiomatic': 'Klaas vertrouwt hem helemaal niet.', 'meaning_literal': 'Klaas zal hem niet verraden, ook niet voor geld.', 'meaning_distractor': 'Klaas is erg betrouwbaar.', 'thisN': 4, 'thisTrialN': 4, 'thisRepN': 0}>
+83.0303 	EXP 	questionText: autoDraw = False
+83.0303 	EXP 	pauseText: text = 'Dit was blok 0 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+83.0303 	EXP 	pauseText: autoDraw = False
+83.0303 	EXP 	fixation: autoDraw = True
+84.0309 	INFO 	Keyboard events cleared
+84.0304 	EXP 	fixation: autoDraw = False
+84.0304 	EXP 	fixation: autoDraw = False
+84.0304 	EXP 	trialText: autoDraw = True
+84.7684 	DATA 	Keypress: space
+85.4676 	DATA 	Keypress: space
+86.0508 	DATA 	Keypress: space
+86.5008 	DATA 	Keypress: space
+87.1187 	DATA 	Keypress: space
+87.6515 	DATA 	Keypress: space
+87.6804 	INFO 	Keyboard events cleared
+87.6799 	EXP 	trialText: autoDraw = False
+87.6799 	EXP 	questionText: height = 0.05
+87.6799 	EXP 	questionText: height = 0.05
+87.6799 	EXP 	questionText: height = 0.05
+87.6799 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Klaas vertrouwt hem helemaal niet.\n\n(b) Klaas zal hem niet verraden, ook niet voor geld.\n\n(c) Klaas is erg betrouwbaar.\n\n\nKies je antwoord met (a), (b) of (c)'
+87.6799 	EXP 	questionText: autoDraw = True
+89.2852 	DATA 	Keypress: b
+89.2870 	EXP 	New trial (rep=0, index=5): <Trial 5 (5 in rep 0) data={'stimID': 18, 'stimType': 'filler', 'transparent': 1, 'idiom': 'Max smijt met munten.', 'meaning_idiomatic': 'Max geeft te veel geld uit.', 'meaning_literal': 'Max gooit met munten.', 'meaning_distractor': 'Max speelt vals: hij betaalt om te winnen.', 'thisN': 5, 'thisTrialN': 5, 'thisRepN': 0}>
+89.2967 	EXP 	questionText: autoDraw = False
+89.2967 	EXP 	pauseText: text = 'Dit was blok 0 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+89.2967 	EXP 	pauseText: autoDraw = False
+89.2967 	EXP 	fixation: autoDraw = True
+90.2980 	INFO 	Keyboard events cleared
+90.2973 	EXP 	fixation: autoDraw = False
+90.2973 	EXP 	fixation: autoDraw = False
+90.2973 	EXP 	trialText: autoDraw = True
+90.9511 	DATA 	Keypress: space
+91.4512 	DATA 	Keypress: space
+91.9340 	DATA 	Keypress: space
+92.3507 	DATA 	Keypress: space
+92.3798 	INFO 	Keyboard events cleared
+92.3792 	EXP 	trialText: autoDraw = False
+92.3792 	EXP 	questionText: height = 0.05
+92.3792 	EXP 	questionText: height = 0.05
+92.3792 	EXP 	questionText: height = 0.05
+92.3792 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Max geeft te veel geld uit.\n\n(b) Max gooit met munten.\n\n(c) Max speelt vals: hij betaalt om te winnen.\n\n\nKies je antwoord met (a), (b) of (c)'
+92.3792 	EXP 	questionText: autoDraw = True
+94.2175 	DATA 	Keypress: b
+94.2195 	EXP 	New trial (rep=0, index=6): <Trial 6 (6 in rep 0) data={'stimID': 9, 'stimType': 'experimental', 'transparent': 0, 'idiom': 'Sam helpt hem om zeep.', 'meaning_idiomatic': 'Sam vermoordt hem.', 'meaning_literal': 'Sam geeft hem zeep.', 'meaning_distractor': 'Sam helpt hem met schoonmaken.', 'thisN': 6, 'thisTrialN': 6, 'thisRepN': 0}>
+94.2299 	EXP 	questionText: autoDraw = False
+94.2299 	EXP 	pauseText: text = 'Dit was blok 0 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+94.2299 	EXP 	pauseText: autoDraw = False
+94.2299 	EXP 	fixation: autoDraw = True
+95.2306 	INFO 	Keyboard events cleared
+95.2300 	EXP 	fixation: autoDraw = False
+95.2300 	EXP 	fixation: autoDraw = False
+95.2300 	EXP 	trialText: autoDraw = True
+95.9514 	DATA 	Keypress: space
+96.3845 	DATA 	Keypress: space
+96.8678 	DATA 	Keypress: space
+97.3338 	DATA 	Keypress: space
+98.0013 	DATA 	Keypress: space
+98.0297 	INFO 	Keyboard events cleared
+98.0292 	EXP 	trialText: autoDraw = False
+98.0292 	EXP 	questionText: height = 0.05
+98.0292 	EXP 	questionText: height = 0.05
+98.0292 	EXP 	questionText: height = 0.05
+98.0292 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Sam helpt hem met schoonmaken.\n\n(b) Sam vermoordt hem.\n\n(c) Sam geeft hem zeep.\n\n\nKies je antwoord met (a), (b) of (c)'
+98.0292 	EXP 	questionText: autoDraw = True
+102.1006 	DATA 	Keypress: b
+102.1028 	EXP 	New trial (rep=0, index=7): <Trial 7 (7 in rep 0) data={'stimID': 16, 'stimType': 'experimental', 'transparent': 0, 'idiom': 'Maud loopt op haar tenen.', 'meaning_idiomatic': 'Maud kan het maar net aan.', 'meaning_literal': 'Maud loopt op haar tenen.', 'meaning_distractor': 'Maud doet alsof ze ergens goed in is.', 'thisN': 7, 'thisTrialN': 7, 'thisRepN': 0}>
+102.1130 	EXP 	questionText: autoDraw = False
+102.1130 	EXP 	pauseText: text = 'Dit was blok 0 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+102.1130 	EXP 	pauseText: autoDraw = False
+102.1130 	EXP 	fixation: autoDraw = True
+103.1138 	INFO 	Keyboard events cleared
+103.1132 	EXP 	fixation: autoDraw = False
+103.1132 	EXP 	fixation: autoDraw = False
+103.1132 	EXP 	trialText: autoDraw = True
+103.5686 	DATA 	Keypress: space
+103.9847 	DATA 	Keypress: space
+104.4346 	DATA 	Keypress: space
+104.9509 	DATA 	Keypress: space
+105.4338 	DATA 	Keypress: space
+105.4633 	INFO 	Keyboard events cleared
+105.4627 	EXP 	trialText: autoDraw = False
+105.4627 	EXP 	questionText: height = 0.05
+105.4627 	EXP 	questionText: height = 0.05
+105.4627 	EXP 	questionText: height = 0.05
+105.4627 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Maud loopt op haar tenen.\n\n(b) Maud doet alsof ze ergens goed in is.\n\n(c) Maud kan het maar net aan.\n\n\nKies je antwoord met (a), (b) of (c)'
+105.4627 	EXP 	questionText: autoDraw = True
+108.8837 	DATA 	Keypress: c
+108.9130 	INFO 	Keyboard events cleared
+108.9124 	EXP 	questionText: autoDraw = False
+108.9124 	EXP 	pauseText: height = 0.05
+108.9124 	EXP 	pauseText: height = 0.05
+108.9124 	EXP 	pauseText: height = 0.05
+108.9124 	EXP 	pauseText: text = 'Dit was blok 1 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+108.9124 	EXP 	pauseText: autoDraw = True
+111.2195 	EXP 	New trial (rep=0, index=8): <Trial 8 (8 in rep 0) data={'stimID': 1, 'stimType': 'experimental', 'transparent': 1, 'idiom': 'Mark laat zijn gezicht zien.', 'meaning_idiomatic': 'Mark is even aanwezig.', 'meaning_literal': 'Mark laat zijn gezicht aan iemand zien.', 'meaning_distractor': 'Mark toont zijn echte emoties.', 'thisN': 8, 'thisTrialN': 8, 'thisRepN': 0}>
+111.2212 	DATA 	Keypress: space
+111.2297 	EXP 	pauseText: autoDraw = False
+111.2297 	EXP 	fixation: autoDraw = True
+112.2311 	INFO 	Keyboard events cleared
+112.2306 	EXP 	fixation: autoDraw = False
+112.2306 	EXP 	fixation: autoDraw = False
+112.2306 	EXP 	trialText: autoDraw = True
+112.8509 	DATA 	Keypress: space
+113.4340 	DATA 	Keypress: space
+113.9847 	DATA 	Keypress: space
+114.2844 	DATA 	Keypress: space
+114.7011 	DATA 	Keypress: space
+114.7297 	INFO 	Keyboard events cleared
+114.7291 	EXP 	trialText: autoDraw = False
+114.7291 	EXP 	questionText: height = 0.05
+114.7291 	EXP 	questionText: height = 0.05
+114.7291 	EXP 	questionText: height = 0.05
+114.7291 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Mark is even aanwezig.\n\n(b) Mark laat zijn gezicht aan iemand zien.\n\n(c) Mark toont zijn echte emoties.\n\n\nKies je antwoord met (a), (b) of (c)'
+114.7291 	EXP 	questionText: autoDraw = True
+118.8173 	DATA 	Keypress: a
+118.8195 	EXP 	New trial (rep=0, index=9): <Trial 9 (9 in rep 0) data={'stimID': 12, 'stimType': 'experimental', 'transparent': 0, 'idiom': 'Julia doet mee voor spek en bonen.', 'meaning_idiomatic': 'Julia speelt mee, maar het telt niet.', 'meaning_literal': 'Julia doet mee om spek en bonen te krijgen.', 'meaning_distractor': 'Julia doet mee om te winnen.', 'thisN': 9, 'thisTrialN': 9, 'thisRepN': 0}>
+118.8299 	EXP 	questionText: autoDraw = False
+118.8299 	EXP 	pauseText: text = 'Dit was blok 1 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+118.8299 	EXP 	pauseText: autoDraw = False
+118.8299 	EXP 	fixation: autoDraw = True
+119.8301 	INFO 	Keyboard events cleared
+119.8296 	EXP 	fixation: autoDraw = False
+119.8296 	EXP 	fixation: autoDraw = False
+119.8296 	EXP 	trialText: autoDraw = True
+120.2002 	DATA 	Keypress: space
+120.6007 	DATA 	Keypress: space
+121.2044 	DATA 	Keypress: space
+121.9170 	DATA 	Keypress: space
+122.2506 	DATA 	Keypress: space
+122.7833 	DATA 	Keypress: space
+123.5504 	DATA 	Keypress: space
+123.5793 	INFO 	Keyboard events cleared
+123.5788 	EXP 	trialText: autoDraw = False
+123.5788 	EXP 	questionText: height = 0.05
+123.5788 	EXP 	questionText: height = 0.05
+123.5788 	EXP 	questionText: height = 0.05
+123.5788 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Julia speelt mee, maar het telt niet.\n\n(b) Julia doet mee om spek en bonen te krijgen.\n\n(c) Julia doet mee om te winnen.\n\n\nKies je antwoord met (a), (b) of (c)'
+123.5788 	EXP 	questionText: autoDraw = True
+129.4336 	DATA 	Keypress: a
+129.4355 	EXP 	New trial (rep=0, index=10): <Trial 10 (10 in rep 0) data={'stimID': 27, 'stimType': 'filler', 'transparent': 0, 'idiom': 'Lieke gaat voor Bo door het water.', 'meaning_idiomatic': 'Lieke heeft alles over voor Bo.', 'meaning_literal': 'Lieke zwemt door het water naar Bo toe.', 'meaning_distractor': 'Lieke fiets door de regen naar Bo toe.', 'thisN': 10, 'thisTrialN': 10, 'thisRepN': 0}>
+129.4460 	EXP 	questionText: autoDraw = False
+129.4460 	EXP 	pauseText: text = 'Dit was blok 1 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+129.4460 	EXP 	pauseText: autoDraw = False
+129.4460 	EXP 	fixation: autoDraw = True
+130.4467 	INFO 	Keyboard events cleared
+130.4462 	EXP 	fixation: autoDraw = False
+130.4462 	EXP 	fixation: autoDraw = False
+130.4462 	EXP 	trialText: autoDraw = True
+130.8174 	DATA 	Keypress: space
+131.3166 	DATA 	Keypress: space
+131.9341 	DATA 	Keypress: space
+132.3834 	DATA 	Keypress: space
+132.9667 	DATA 	Keypress: space
+133.3669 	DATA 	Keypress: space
+134.1670 	DATA 	Keypress: space
+134.1965 	INFO 	Keyboard events cleared
+134.1959 	EXP 	trialText: autoDraw = False
+134.1959 	EXP 	questionText: height = 0.05
+134.1959 	EXP 	questionText: height = 0.05
+134.1959 	EXP 	questionText: height = 0.05
+134.1959 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Lieke heeft alles over voor Bo.\n\n(b) Lieke zwemt door het water naar Bo toe.\n\n(c) Lieke fiets door de regen naar Bo toe.\n\n\nKies je antwoord met (a), (b) of (c)'
+134.1959 	EXP 	questionText: autoDraw = True
+136.1497 	DATA 	Keypress: b
+136.1515 	EXP 	New trial (rep=0, index=11): <Trial 11 (11 in rep 0) data={'stimID': 24, 'stimType': 'filler', 'transparent': 1, 'idiom': 'Jurre staat op het geld.', 'meaning_idiomatic': 'Jurre is erg rijk.', 'meaning_literal': 'Jurre staat met zijn voet op het geld.', 'meaning_distractor': 'Jurre let op het geld.', 'thisN': 11, 'thisTrialN': 11, 'thisRepN': 0}>
+136.1626 	EXP 	questionText: autoDraw = False
+136.1626 	EXP 	pauseText: text = 'Dit was blok 1 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+136.1626 	EXP 	pauseText: autoDraw = False
+136.1626 	EXP 	fixation: autoDraw = True
+137.1628 	INFO 	Keyboard events cleared
+137.1623 	EXP 	fixation: autoDraw = False
+137.1623 	EXP 	fixation: autoDraw = False
+137.1623 	EXP 	trialText: autoDraw = True
+137.7831 	DATA 	Keypress: space
+138.3028 	DATA 	Keypress: space
+138.8168 	DATA 	Keypress: space
+139.5003 	DATA 	Keypress: space
+140.4024 	DATA 	Keypress: space
+140.4458 	INFO 	Keyboard events cleared
+140.4453 	EXP 	trialText: autoDraw = False
+140.4453 	EXP 	questionText: height = 0.05
+140.4453 	EXP 	questionText: height = 0.05
+140.4453 	EXP 	questionText: height = 0.05
+140.4453 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Jurre is erg rijk.\n\n(b) Jurre let op het geld.\n\n(c) Jurre staat met zijn voet op het geld.\n\n\nKies je antwoord met (a), (b) of (c)'
+140.4453 	EXP 	questionText: autoDraw = True
+144.2502 	DATA 	Keypress: c
+144.2519 	EXP 	New trial (rep=0, index=12): <Trial 12 (12 in rep 0) data={'stimID': 15, 'stimType': 'experimental', 'transparent': 0, 'idiom': 'Jeroen moet stoom afblazen.', 'meaning_idiomatic': 'Jeroen is gefrustreerd en moet hierover praten.', 'meaning_literal': 'Jeroen blaast stoom weg van zijn hete thee.', 'meaning_distractor': 'Jeroen heeft gesport en moet een cooling-down doen.', 'thisN': 12, 'thisTrialN': 12, 'thisRepN': 0}>
+144.2622 	EXP 	questionText: autoDraw = False
+144.2622 	EXP 	pauseText: text = 'Dit was blok 1 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+144.2622 	EXP 	pauseText: autoDraw = False
+144.2622 	EXP 	fixation: autoDraw = True
+145.2632 	INFO 	Keyboard events cleared
+145.2626 	EXP 	fixation: autoDraw = False
+145.2626 	EXP 	fixation: autoDraw = False
+145.2626 	EXP 	trialText: autoDraw = True
+145.7510 	DATA 	Keypress: space
+146.2331 	DATA 	Keypress: space
+146.7999 	DATA 	Keypress: space
+147.4508 	DATA 	Keypress: space
+147.4789 	INFO 	Keyboard events cleared
+147.4782 	EXP 	trialText: autoDraw = False
+147.4782 	EXP 	questionText: height = 0.05
+147.4782 	EXP 	questionText: height = 0.05
+147.4782 	EXP 	questionText: height = 0.05
+147.4782 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Jeroen heeft gesport en moet een cooling-down doen.\n\n(b) Jeroen blaast stoom weg van zijn hete thee.\n\n(c) Jeroen is gefrustreerd en moet hierover praten.\n\n\nKies je antwoord met (a), (b) of (c)'
+147.4782 	EXP 	questionText: autoDraw = True
+151.6166 	DATA 	Keypress: c
+151.6185 	EXP 	New trial (rep=0, index=13): <Trial 13 (13 in rep 0) data={'stimID': 23, 'stimType': 'filler', 'transparent': 1, 'idiom': 'Lars staat een uur in de wind.', 'meaning_idiomatic': 'Lars stinkt verschrikkelijk.', 'meaning_literal': 'Lars staat buiten in de wind te wachten.', 'meaning_distractor': 'Lars krijgt veel kritiek.', 'thisN': 13, 'thisTrialN': 13, 'thisRepN': 0}>
+151.6288 	EXP 	questionText: autoDraw = False
+151.6288 	EXP 	pauseText: text = 'Dit was blok 1 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+151.6288 	EXP 	pauseText: autoDraw = False
+151.6288 	EXP 	fixation: autoDraw = True
+152.6294 	INFO 	Keyboard events cleared
+152.6289 	EXP 	fixation: autoDraw = False
+152.6289 	EXP 	fixation: autoDraw = False
+152.6289 	EXP 	trialText: autoDraw = True
+153.0161 	DATA 	Keypress: space
+153.6166 	DATA 	Keypress: space
+154.1666 	DATA 	Keypress: space
+154.7169 	DATA 	Keypress: space
+155.1200 	DATA 	Keypress: space
+155.8035 	DATA 	Keypress: space
+156.5835 	DATA 	Keypress: space
+156.6123 	INFO 	Keyboard events cleared
+156.6117 	EXP 	trialText: autoDraw = False
+156.6117 	EXP 	questionText: height = 0.05
+156.6117 	EXP 	questionText: height = 0.05
+156.6117 	EXP 	questionText: height = 0.05
+156.6117 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Lars stinkt verschrikkelijk.\n\n(b) Lars staat buiten in de wind te wachten.\n\n(c) Lars krijgt veel kritiek.\n\n\nKies je antwoord met (a), (b) of (c)'
+156.6117 	EXP 	questionText: autoDraw = True
+160.6494 	DATA 	Keypress: b
+160.6512 	EXP 	New trial (rep=0, index=14): <Trial 14 (14 in rep 0) data={'stimID': 32, 'stimType': 'filler', 'transparent': 0, 'idiom': 'Sandra heeft een gat in haar zak.', 'meaning_idiomatic': 'Sandra geeft gemakkelijk geld uit.', 'meaning_literal': 'Sandra heeft een gat in haar zak.', 'meaning_distractor': 'Sandra verliest vaak spullen.', 'thisN': 14, 'thisTrialN': 14, 'thisRepN': 0}>
+160.6621 	EXP 	questionText: autoDraw = False
+160.6621 	EXP 	pauseText: text = 'Dit was blok 1 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+160.6621 	EXP 	pauseText: autoDraw = False
+160.6621 	EXP 	fixation: autoDraw = True
+161.6630 	INFO 	Keyboard events cleared
+161.6625 	EXP 	fixation: autoDraw = False
+161.6625 	EXP 	fixation: autoDraw = False
+161.6625 	EXP 	trialText: autoDraw = True
+162.0831 	DATA 	Keypress: space
+162.5494 	DATA 	Keypress: space
+163.1829 	DATA 	Keypress: space
+163.5993 	DATA 	Keypress: space
+164.1663 	DATA 	Keypress: space
+164.5671 	DATA 	Keypress: space
+165.1335 	DATA 	Keypress: space
+165.1617 	INFO 	Keyboard events cleared
+165.1612 	EXP 	trialText: autoDraw = False
+165.1612 	EXP 	questionText: height = 0.05
+165.1612 	EXP 	questionText: height = 0.05
+165.1612 	EXP 	questionText: height = 0.05
+165.1612 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Sandra heeft een gat in haar zak.\n\n(b) Sandra geeft gemakkelijk geld uit.\n\n(c) Sandra verliest vaak spullen.\n\n\nKies je antwoord met (a), (b) of (c)'
+165.1612 	EXP 	questionText: autoDraw = True
+167.9503 	DATA 	Keypress: a
+167.9521 	EXP 	New trial (rep=0, index=15): <Trial 15 (15 in rep 0) data={'stimID': 13, 'stimType': 'experimental', 'transparent': 0, 'idiom': 'Mees zet de boel op stelten.', 'meaning_idiomatic': 'Mees veroorzaakt onrust.', 'meaning_literal': 'Mees maakt ergens stelten onder.', 'meaning_distractor': 'Mees begint aan een nieuw project.', 'thisN': 15, 'thisTrialN': 15, 'thisRepN': 0}>
+167.9620 	EXP 	questionText: autoDraw = False
+167.9620 	EXP 	pauseText: text = 'Dit was blok 1 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+167.9620 	EXP 	pauseText: autoDraw = False
+167.9620 	EXP 	fixation: autoDraw = True
+168.9623 	INFO 	Keyboard events cleared
+168.9618 	EXP 	fixation: autoDraw = False
+168.9618 	EXP 	fixation: autoDraw = False
+168.9618 	EXP 	trialText: autoDraw = True
+169.2999 	DATA 	Keypress: space
+169.8661 	DATA 	Keypress: space
+170.3001 	DATA 	Keypress: space
+170.8013 	DATA 	Keypress: space
+171.4831 	DATA 	Keypress: space
+172.2493 	DATA 	Keypress: space
+172.2787 	INFO 	Keyboard events cleared
+172.2781 	EXP 	trialText: autoDraw = False
+172.2781 	EXP 	questionText: height = 0.05
+172.2781 	EXP 	questionText: height = 0.05
+172.2781 	EXP 	questionText: height = 0.05
+172.2781 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Mees maakt ergens stelten onder.\n\n(b) Mees begint aan een nieuw project.\n\n(c) Mees veroorzaakt onrust.\n\n\nKies je antwoord met (a), (b) of (c)'
+172.2781 	EXP 	questionText: autoDraw = True
+178.9496 	DATA 	Keypress: c
+178.9781 	INFO 	Keyboard events cleared
+178.9776 	EXP 	questionText: autoDraw = False
+178.9776 	EXP 	pauseText: height = 0.05
+178.9776 	EXP 	pauseText: height = 0.05
+178.9776 	EXP 	pauseText: height = 0.05
+178.9776 	EXP 	pauseText: text = 'Dit was blok 2 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+178.9776 	EXP 	pauseText: autoDraw = True
+180.8175 	EXP 	New trial (rep=0, index=16): <Trial 16 (16 in rep 0) data={'stimID': 2, 'stimType': 'experimental', 'transparent': 1, 'idiom': 'Stijn loopt me voor de voeten.', 'meaning_idiomatic': 'Stijn hindert mij.', 'meaning_literal': 'Stijn loopt voor mij.', 'meaning_distractor': 'Stijn neemt de leiding.', 'thisN': 16, 'thisTrialN': 16, 'thisRepN': 0}>
+180.8191 	DATA 	Keypress: space
+180.8285 	EXP 	pauseText: autoDraw = False
+180.8285 	EXP 	fixation: autoDraw = True
+181.8287 	INFO 	Keyboard events cleared
+181.8281 	EXP 	fixation: autoDraw = False
+181.8281 	EXP 	fixation: autoDraw = False
+181.8281 	EXP 	trialText: autoDraw = True
+182.3178 	DATA 	Keypress: space
+182.7489 	DATA 	Keypress: space
+183.3327 	DATA 	Keypress: space
+183.8159 	DATA 	Keypress: space
+184.3998 	DATA 	Keypress: space
+184.9497 	DATA 	Keypress: space
+184.9789 	INFO 	Keyboard events cleared
+184.9784 	EXP 	trialText: autoDraw = False
+184.9784 	EXP 	questionText: height = 0.05
+184.9784 	EXP 	questionText: height = 0.05
+184.9784 	EXP 	questionText: height = 0.05
+184.9784 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Stijn loopt voor mij.\n\n(b) Stijn neemt de leiding.\n\n(c) Stijn hindert mij.\n\n\nKies je antwoord met (a), (b) of (c)'
+184.9784 	EXP 	questionText: autoDraw = True
+187.3490 	DATA 	Keypress: c
+187.3508 	EXP 	New trial (rep=0, index=17): <Trial 17 (17 in rep 0) data={'stimID': 6, 'stimType': 'experimental', 'transparent': 1, 'idiom': 'Wim heeft een kort lontje.', 'meaning_idiomatic': 'Wim wordt snel boos.', 'meaning_literal': 'Wim heeft vuurwerk met een kort lontje.', 'meaning_distractor': 'Wim wordt snel moe.', 'thisN': 17, 'thisTrialN': 17, 'thisRepN': 0}>
+187.3614 	EXP 	questionText: autoDraw = False
+187.3614 	EXP 	pauseText: text = 'Dit was blok 2 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+187.3614 	EXP 	pauseText: autoDraw = False
+187.3614 	EXP 	fixation: autoDraw = True
+188.3624 	INFO 	Keyboard events cleared
+188.3619 	EXP 	fixation: autoDraw = False
+188.3619 	EXP 	fixation: autoDraw = False
+188.3619 	EXP 	trialText: autoDraw = True
+188.8679 	DATA 	Keypress: space
+189.3168 	DATA 	Keypress: space
+189.8490 	DATA 	Keypress: space
+190.4505 	DATA 	Keypress: space
+190.8160 	DATA 	Keypress: space
+190.8450 	INFO 	Keyboard events cleared
+190.8444 	EXP 	trialText: autoDraw = False
+190.8444 	EXP 	questionText: height = 0.05
+190.8444 	EXP 	questionText: height = 0.05
+190.8444 	EXP 	questionText: height = 0.05
+190.8444 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Wim wordt snel boos.\n\n(b) Wim heeft vuurwerk met een kort lontje.\n\n(c) Wim wordt snel moe.\n\n\nKies je antwoord met (a), (b) of (c)'
+190.8444 	EXP 	questionText: autoDraw = True
+192.3354 	DATA 	Keypress: a
+192.3508 	EXP 	New trial (rep=0, index=18): <Trial 18 (18 in rep 0) data={'stimID': 21, 'stimType': 'filler', 'transparent': 1, 'idiom': 'Thijs maakt de eerste sprong.', 'meaning_idiomatic': 'Thijs neemt initiatief.', 'meaning_literal': 'Thijs springt als eerste.', 'meaning_distractor': 'Thijs probeert iets nieuws.', 'thisN': 18, 'thisTrialN': 18, 'thisRepN': 0}>
+192.3616 	EXP 	questionText: autoDraw = False
+192.3616 	EXP 	pauseText: text = 'Dit was blok 2 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+192.3616 	EXP 	pauseText: autoDraw = False
+192.3616 	EXP 	fixation: autoDraw = True
+193.3622 	INFO 	Keyboard events cleared
+193.3616 	EXP 	fixation: autoDraw = False
+193.3616 	EXP 	fixation: autoDraw = False
+193.3616 	EXP 	trialText: autoDraw = True
+193.9320 	DATA 	Keypress: space
+194.3491 	DATA 	Keypress: space
+194.8498 	DATA 	Keypress: space
+195.1829 	DATA 	Keypress: space
+195.6324 	DATA 	Keypress: space
+195.6611 	INFO 	Keyboard events cleared
+195.6606 	EXP 	trialText: autoDraw = False
+195.6606 	EXP 	questionText: height = 0.05
+195.6606 	EXP 	questionText: height = 0.05
+195.6606 	EXP 	questionText: height = 0.05
+195.6606 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Thijs probeert iets nieuws.\n\n(b) Thijs springt als eerste.\n\n(c) Thijs neemt initiatief.\n\n\nKies je antwoord met (a), (b) of (c)'
+195.6606 	EXP 	questionText: autoDraw = True
+199.9156 	DATA 	Keypress: b
+199.9174 	EXP 	New trial (rep=0, index=19): <Trial 19 (19 in rep 0) data={'stimID': 26, 'stimType': 'filler', 'transparent': 0, 'idiom': 'David zet Jesse in de lift.', 'meaning_idiomatic': 'David geeft Jesse een compliment.', 'meaning_literal': 'David zet Jesse in een lift.', 'meaning_distractor': 'David tilt Jesse op.', 'thisN': 19, 'thisTrialN': 19, 'thisRepN': 0}>
+199.9281 	EXP 	questionText: autoDraw = False
+199.9281 	EXP 	pauseText: text = 'Dit was blok 2 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+199.9281 	EXP 	pauseText: autoDraw = False
+199.9281 	EXP 	fixation: autoDraw = True
+200.9286 	INFO 	Keyboard events cleared
+200.9281 	EXP 	fixation: autoDraw = False
+200.9281 	EXP 	fixation: autoDraw = False
+200.9281 	EXP 	trialText: autoDraw = True
+201.4493 	DATA 	Keypress: space
+201.8855 	DATA 	Keypress: space
+202.4670 	DATA 	Keypress: space
+202.8655 	DATA 	Keypress: space
+203.2500 	DATA 	Keypress: space
+203.7156 	DATA 	Keypress: space
+203.7447 	INFO 	Keyboard events cleared
+203.7441 	EXP 	trialText: autoDraw = False
+203.7441 	EXP 	questionText: height = 0.05
+203.7441 	EXP 	questionText: height = 0.05
+203.7441 	EXP 	questionText: height = 0.05
+203.7441 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) David geeft Jesse een compliment.\n\n(b) David tilt Jesse op.\n\n(c) David zet Jesse in een lift.\n\n\nKies je antwoord met (a), (b) of (c)'
+203.7441 	EXP 	questionText: autoDraw = True
+208.2495 	DATA 	Keypress: c
+208.2512 	EXP 	New trial (rep=0, index=20): <Trial 20 (20 in rep 0) data={'stimID': 7, 'stimType': 'experimental', 'transparent': 1, 'idiom': 'Tim helpt Niels uit de brand.', 'meaning_idiomatic': 'Tim helpt Niels met grote problemen.', 'meaning_literal': 'Tim redt Niels, omdat er brand is.', 'meaning_distractor': 'Tim helpt Niels met vuur maken.', 'thisN': 20, 'thisTrialN': 20, 'thisRepN': 0}>
+208.2607 	EXP 	questionText: autoDraw = False
+208.2607 	EXP 	pauseText: text = 'Dit was blok 2 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+208.2607 	EXP 	pauseText: autoDraw = False
+208.2607 	EXP 	fixation: autoDraw = True
+209.2616 	INFO 	Keyboard events cleared
+209.2610 	EXP 	fixation: autoDraw = False
+209.2610 	EXP 	fixation: autoDraw = False
+209.2610 	EXP 	trialText: autoDraw = True
+210.1320 	DATA 	Keypress: space
+210.7508 	DATA 	Keypress: space
+211.1320 	DATA 	Keypress: space
+211.6490 	DATA 	Keypress: space
+211.9992 	DATA 	Keypress: space
+212.5328 	DATA 	Keypress: space
+212.5613 	INFO 	Keyboard events cleared
+212.5607 	EXP 	trialText: autoDraw = False
+212.5607 	EXP 	questionText: height = 0.05
+212.5607 	EXP 	questionText: height = 0.05
+212.5607 	EXP 	questionText: height = 0.05
+212.5607 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Tim helpt Niels met grote problemen.\n\n(b) Tim helpt Niels met vuur maken.\n\n(c) Tim redt Niels, omdat er brand is.\n\n\nKies je antwoord met (a), (b) of (c)'
+212.5607 	EXP 	questionText: autoDraw = True
+214.6321 	DATA 	Keypress: a
+214.6340 	EXP 	New trial (rep=0, index=21): <Trial 21 (21 in rep 0) data={'stimID': 25, 'stimType': 'filler', 'transparent': 0, 'idiom': 'Roos breekt het glas.', 'meaning_idiomatic': 'Roos start het gesprek.', 'meaning_literal': 'Roos breekt een glas.', 'meaning_distractor': 'Roos neemt een besluit.', 'thisN': 21, 'thisTrialN': 21, 'thisRepN': 0}>
+214.6451 	EXP 	questionText: autoDraw = False
+214.6451 	EXP 	pauseText: text = 'Dit was blok 2 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+214.6451 	EXP 	pauseText: autoDraw = False
+214.6451 	EXP 	fixation: autoDraw = True
+215.6447 	INFO 	Keyboard events cleared
+215.6442 	EXP 	fixation: autoDraw = False
+215.6442 	EXP 	fixation: autoDraw = False
+215.6442 	EXP 	trialText: autoDraw = True
+216.2343 	DATA 	Keypress: space
+216.6820 	DATA 	Keypress: space
+217.2676 	DATA 	Keypress: space
+218.5494 	DATA 	Keypress: space
+218.5774 	INFO 	Keyboard events cleared
+218.5769 	EXP 	trialText: autoDraw = False
+218.5769 	EXP 	questionText: height = 0.05
+218.5769 	EXP 	questionText: height = 0.05
+218.5769 	EXP 	questionText: height = 0.05
+218.5769 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Roos neemt een besluit.\n\n(b) Roos start het gesprek.\n\n(c) Roos breekt een glas.\n\n\nKies je antwoord met (a), (b) of (c)'
+218.5769 	EXP 	questionText: autoDraw = True
+219.4155 	DATA 	Keypress: o
+219.6824 	DATA 	Keypress: o
+219.8988 	DATA 	Keypress: o
+220.1817 	DATA 	Keypress: i
+220.3821 	DATA 	Keypress: i
+220.6318 	DATA 	Keypress: u
+220.8490 	DATA 	Keypress: u
+221.1822 	DATA 	Keypress: u
+221.7988 	DATA 	Keypress: y
+223.3488 	DATA 	Keypress: c
+223.3505 	EXP 	New trial (rep=0, index=22): <Trial 22 (22 in rep 0) data={'stimID': 22, 'stimType': 'filler', 'transparent': 1, 'idiom': 'Emma gaat met Iris om het vuur zitten.', 'meaning_idiomatic': 'Emma bespreekt iets met Iris.', 'meaning_literal': 'Emma zit met Iris om het kampvuur.', 'meaning_distractor': 'Emma en Iris hebben ruzie.', 'thisN': 22, 'thisTrialN': 22, 'thisRepN': 0}>
+223.3611 	EXP 	questionText: autoDraw = False
+223.3611 	EXP 	pauseText: text = 'Dit was blok 2 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+223.3611 	EXP 	pauseText: autoDraw = False
+223.3611 	EXP 	fixation: autoDraw = True
+224.3616 	INFO 	Keyboard events cleared
+224.3610 	EXP 	fixation: autoDraw = False
+224.3610 	EXP 	fixation: autoDraw = False
+224.3610 	EXP 	trialText: autoDraw = True
+225.2652 	DATA 	Keypress: space
+225.8837 	DATA 	Keypress: space
+226.3486 	DATA 	Keypress: space
+226.8836 	DATA 	Keypress: space
+227.2988 	DATA 	Keypress: space
+227.7650 	DATA 	Keypress: space
+228.3822 	DATA 	Keypress: space
+228.7676 	DATA 	Keypress: space
+228.8106 	INFO 	Keyboard events cleared
+228.8101 	EXP 	trialText: autoDraw = False
+228.8101 	EXP 	questionText: height = 0.05
+228.8101 	EXP 	questionText: height = 0.05
+228.8101 	EXP 	questionText: height = 0.05
+228.8101 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Emma en Iris hebben ruzie.\n\n(b) Emma bespreekt iets met Iris.\n\n(c) Emma zit met Iris om het kampvuur.\n\n\nKies je antwoord met (a), (b) of (c)'
+228.8101 	EXP 	questionText: autoDraw = True
+230.5983 	DATA 	Keypress: c
+230.6001 	EXP 	New trial (rep=0, index=23): <Trial 23 (23 in rep 0) data={'stimID': 31, 'stimType': 'filler', 'transparent': 0, 'idiom': 'Jan schiet uit zijn schoen.', 'meaning_idiomatic': 'Jan wordt boos.', 'meaning_literal': 'Jan verliest zijn schoen', 'meaning_distractor': 'Jan struikelt.', 'thisN': 23, 'thisTrialN': 23, 'thisRepN': 0}>
+230.6109 	EXP 	questionText: autoDraw = False
+230.6109 	EXP 	pauseText: text = 'Dit was blok 2 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+230.6109 	EXP 	pauseText: autoDraw = False
+230.6109 	EXP 	fixation: autoDraw = True
+231.6113 	INFO 	Keyboard events cleared
+231.6108 	EXP 	fixation: autoDraw = False
+231.6108 	EXP 	fixation: autoDraw = False
+231.6108 	EXP 	trialText: autoDraw = True
+232.3486 	DATA 	Keypress: space
+232.9827 	DATA 	Keypress: space
+233.3484 	DATA 	Keypress: space
+233.9150 	DATA 	Keypress: space
+234.5645 	DATA 	Keypress: space
+234.5941 	INFO 	Keyboard events cleared
+234.5935 	EXP 	trialText: autoDraw = False
+234.5935 	EXP 	questionText: height = 0.05
+234.5935 	EXP 	questionText: height = 0.05
+234.5935 	EXP 	questionText: height = 0.05
+234.5935 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Jan struikelt.\n\n(b) Jan wordt boos.\n\n(c) Jan verliest zijn schoen\n\n\nKies je antwoord met (a), (b) of (c)'
+234.5935 	EXP 	questionText: autoDraw = True
+237.4983 	DATA 	Keypress: c
+237.5271 	INFO 	Keyboard events cleared
+237.5266 	EXP 	questionText: autoDraw = False
+237.5266 	EXP 	pauseText: height = 0.05
+237.5266 	EXP 	pauseText: height = 0.05
+237.5266 	EXP 	pauseText: height = 0.05
+237.5266 	EXP 	pauseText: text = 'Dit was blok 3 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+237.5266 	EXP 	pauseText: autoDraw = True
+243.6832 	DATA 	Keypress: space
+243.6995 	EXP 	New trial (rep=0, index=24): <Trial 24 (24 in rep 0) data={'stimID': 20, 'stimType': 'filler', 'transparent': 1, 'idiom': 'Joep gaat onder de tafel.', 'meaning_idiomatic': 'Joep wordt geopereerd.', 'meaning_literal': 'Joep gaat onder de tafel zitten.', 'meaning_distractor': 'Joep valt flauw.', 'thisN': 24, 'thisTrialN': 24, 'thisRepN': 0}>
+243.7113 	EXP 	pauseText: autoDraw = False
+243.7113 	EXP 	fixation: autoDraw = True
+244.7113 	INFO 	Keyboard events cleared
+244.7107 	EXP 	fixation: autoDraw = False
+244.7107 	EXP 	fixation: autoDraw = False
+244.7107 	EXP 	trialText: autoDraw = True
+245.4649 	DATA 	Keypress: space
+246.0649 	DATA 	Keypress: space
+246.5318 	DATA 	Keypress: space
+247.1818 	DATA 	Keypress: space
+247.9314 	DATA 	Keypress: space
+247.9603 	INFO 	Keyboard events cleared
+247.9598 	EXP 	trialText: autoDraw = False
+247.9598 	EXP 	questionText: height = 0.05
+247.9598 	EXP 	questionText: height = 0.05
+247.9598 	EXP 	questionText: height = 0.05
+247.9598 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Joep valt flauw.\n\n(b) Joep wordt geopereerd.\n\n(c) Joep gaat onder de tafel zitten.\n\n\nKies je antwoord met (a), (b) of (c)'
+247.9598 	EXP 	questionText: autoDraw = True
+251.2487 	DATA 	Keypress: c
+251.2503 	EXP 	New trial (rep=0, index=25): <Trial 25 (25 in rep 0) data={'stimID': 5, 'stimType': 'experimental', 'transparent': 1, 'idiom': 'Anna neemt te veel hooi op haar vork.', 'meaning_idiomatic': 'Anna wil meer werk doen dan ze aankan.', 'meaning_literal': 'Anna schept te veel hooi tegelijk op.', 'meaning_distractor': 'Anna schept te veel eten op haar bord.', 'thisN': 25, 'thisTrialN': 25, 'thisRepN': 0}>
+251.2604 	EXP 	questionText: autoDraw = False
+251.2604 	EXP 	pauseText: text = 'Dit was blok 3 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+251.2604 	EXP 	pauseText: autoDraw = False
+251.2604 	EXP 	fixation: autoDraw = True
+252.2606 	INFO 	Keyboard events cleared
+252.2601 	EXP 	fixation: autoDraw = False
+252.2601 	EXP 	fixation: autoDraw = False
+252.2601 	EXP 	trialText: autoDraw = True
+252.7491 	DATA 	Keypress: space
+253.4142 	DATA 	Keypress: space
+253.9318 	DATA 	Keypress: space
+254.4483 	DATA 	Keypress: space
+254.9149 	DATA 	Keypress: space
+255.2816 	DATA 	Keypress: space
+255.7476 	DATA 	Keypress: space
+256.4984 	DATA 	Keypress: space
+256.5269 	INFO 	Keyboard events cleared
+256.5263 	EXP 	trialText: autoDraw = False
+256.5263 	EXP 	questionText: height = 0.05
+256.5263 	EXP 	questionText: height = 0.05
+256.5263 	EXP 	questionText: height = 0.05
+256.5263 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Anna schept te veel eten op haar bord.\n\n(b) Anna schept te veel hooi tegelijk op.\n\n(c) Anna wil meer werk doen dan ze aankan.\n\n\nKies je antwoord met (a), (b) of (c)'
+256.5263 	EXP 	questionText: autoDraw = True
+260.8817 	DATA 	Keypress: c
+260.8834 	EXP 	New trial (rep=0, index=26): <Trial 26 (26 in rep 0) data={'stimID': 29, 'stimType': 'filler', 'transparent': 0, 'idiom': 'Het komt voor de brandweer.', 'meaning_idiomatic': 'Het komt in orde', 'meaning_literal': 'Er is een melding voor de brandweer.', 'meaning_distractor': 'Het is een probleem dat snel opgelost moet worden.', 'thisN': 26, 'thisTrialN': 26, 'thisRepN': 0}>
+260.8940 	EXP 	questionText: autoDraw = False
+260.8940 	EXP 	pauseText: text = 'Dit was blok 3 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+260.8940 	EXP 	pauseText: autoDraw = False
+260.8940 	EXP 	fixation: autoDraw = True
+261.8938 	INFO 	Keyboard events cleared
+261.8933 	EXP 	fixation: autoDraw = False
+261.8933 	EXP 	fixation: autoDraw = False
+261.8933 	EXP 	trialText: autoDraw = True
+262.5148 	DATA 	Keypress: space
+263.0977 	DATA 	Keypress: space
+263.4815 	DATA 	Keypress: space
+264.0645 	DATA 	Keypress: space
+264.8647 	DATA 	Keypress: space
+264.8939 	INFO 	Keyboard events cleared
+264.8933 	EXP 	trialText: autoDraw = False
+264.8933 	EXP 	questionText: height = 0.05
+264.8933 	EXP 	questionText: height = 0.05
+264.8933 	EXP 	questionText: height = 0.05
+264.8933 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Het is een probleem dat snel opgelost moet worden.\n\n(b) Het komt in orde\n\n(c) Er is een melding voor de brandweer.\n\n\nKies je antwoord met (a), (b) of (c)'
+264.8933 	EXP 	questionText: autoDraw = True
+267.2978 	DATA 	Keypress: c
+267.2995 	EXP 	New trial (rep=0, index=27): <Trial 27 (27 in rep 0) data={'stimID': 14, 'stimType': 'experimental', 'transparent': 0, 'idiom': 'Sofie maakt er een potje van.', 'meaning_idiomatic': 'Sofie laat het mislukken.', 'meaning_literal': 'Sofie stopt iets in een potje.', 'meaning_distractor': 'Sofie bewaart eten voor later.', 'thisN': 27, 'thisTrialN': 27, 'thisRepN': 0}>
+267.3097 	EXP 	questionText: autoDraw = False
+267.3097 	EXP 	pauseText: text = 'Dit was blok 3 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+267.3097 	EXP 	pauseText: autoDraw = False
+267.3097 	EXP 	fixation: autoDraw = True
+268.3107 	INFO 	Keyboard events cleared
+268.3101 	EXP 	fixation: autoDraw = False
+268.3101 	EXP 	fixation: autoDraw = False
+268.3101 	EXP 	trialText: autoDraw = True
+268.8308 	DATA 	Keypress: space
+269.2141 	DATA 	Keypress: space
+269.7813 	DATA 	Keypress: space
+270.1316 	DATA 	Keypress: space
+270.8811 	DATA 	Keypress: space
+271.4006 	DATA 	Keypress: space
+271.4435 	INFO 	Keyboard events cleared
+271.4430 	EXP 	trialText: autoDraw = False
+271.4430 	EXP 	questionText: height = 0.05
+271.4430 	EXP 	questionText: height = 0.05
+271.4430 	EXP 	questionText: height = 0.05
+271.4430 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Sofie stopt iets in een potje.\n\n(b) Sofie bewaart eten voor later.\n\n(c) Sofie laat het mislukken.\n\n\nKies je antwoord met (a), (b) of (c)'
+271.4430 	EXP 	questionText: autoDraw = True
+273.9143 	DATA 	Keypress: c
+273.9161 	EXP 	New trial (rep=0, index=28): <Trial 28 (28 in rep 0) data={'stimID': 4, 'stimType': 'experimental', 'transparent': 1, 'idiom': 'Pieter gaf Daan een trap na.', 'meaning_idiomatic': 'Pieter kwetste Daan nog eens extra.', 'meaning_literal': 'Pieter gaf Daan nog een schop.', 'meaning_distractor': 'Pieter motiveerde Daan nog eens extra.', 'thisN': 28, 'thisTrialN': 28, 'thisRepN': 0}>
+273.9267 	EXP 	questionText: autoDraw = False
+273.9267 	EXP 	pauseText: text = 'Dit was blok 3 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+273.9267 	EXP 	pauseText: autoDraw = False
+273.9267 	EXP 	fixation: autoDraw = True
+274.9272 	INFO 	Keyboard events cleared
+274.9267 	EXP 	fixation: autoDraw = False
+274.9267 	EXP 	fixation: autoDraw = False
+274.9267 	EXP 	trialText: autoDraw = True
+275.5475 	DATA 	Keypress: space
+276.1652 	DATA 	Keypress: space
+276.7316 	DATA 	Keypress: space
+277.1649 	DATA 	Keypress: space
+277.8338 	DATA 	Keypress: space
+278.4480 	DATA 	Keypress: space
+278.4765 	INFO 	Keyboard events cleared
+278.4759 	EXP 	trialText: autoDraw = False
+278.4759 	EXP 	questionText: height = 0.05
+278.4759 	EXP 	questionText: height = 0.05
+278.4759 	EXP 	questionText: height = 0.05
+278.4759 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Pieter motiveerde Daan nog eens extra.\n\n(b) Pieter gaf Daan nog een schop.\n\n(c) Pieter kwetste Daan nog eens extra.\n\n\nKies je antwoord met (a), (b) of (c)'
+278.4759 	EXP 	questionText: autoDraw = True
+283.2310 	DATA 	Keypress: c
+283.2328 	EXP 	New trial (rep=0, index=29): <Trial 29 (29 in rep 0) data={'stimID': 30, 'stimType': 'filler', 'transparent': 0, 'idiom': 'Gijs kan het op zijn arm schrijven.', 'meaning_idiomatic': 'Gijs krijgt niet wat hij hebben wil.', 'meaning_literal': 'Gijs kan iets op zijn arm schrijven.', 'meaning_distractor': 'Gijs schrijft het op, zodat hij het niet vergeet.', 'thisN': 29, 'thisTrialN': 29, 'thisRepN': 0}>
+283.2431 	EXP 	questionText: autoDraw = False
+283.2431 	EXP 	pauseText: text = 'Dit was blok 3 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+283.2431 	EXP 	pauseText: autoDraw = False
+283.2431 	EXP 	fixation: autoDraw = True
+284.2441 	INFO 	Keyboard events cleared
+284.2435 	EXP 	fixation: autoDraw = False
+284.2435 	EXP 	fixation: autoDraw = False
+284.2435 	EXP 	trialText: autoDraw = True
+284.6994 	DATA 	Keypress: space
+285.1142 	DATA 	Keypress: space
+285.6808 	DATA 	Keypress: space
+286.1493 	DATA 	Keypress: space
+286.7142 	DATA 	Keypress: space
+287.2639 	DATA 	Keypress: space
+288.0473 	DATA 	Keypress: space
+288.0767 	INFO 	Keyboard events cleared
+288.0762 	EXP 	trialText: autoDraw = False
+288.0762 	EXP 	questionText: height = 0.05
+288.0762 	EXP 	questionText: height = 0.05
+288.0762 	EXP 	questionText: height = 0.05
+288.0762 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Gijs krijgt niet wat hij hebben wil.\n\n(b) Gijs schrijft het op, zodat hij het niet vergeet.\n\n(c) Gijs kan iets op zijn arm schrijven.\n\n\nKies je antwoord met (a), (b) of (c)'
+288.0762 	EXP 	questionText: autoDraw = True
+293.1480 	DATA 	Keypress: c
+293.1497 	EXP 	New trial (rep=0, index=30): <Trial 30 (30 in rep 0) data={'stimID': 11, 'stimType': 'experimental', 'transparent': 0, 'idiom': 'Sarah heeft het onder de knie.', 'meaning_idiomatic': 'Sarah is er goed in.', 'meaning_literal': 'Sarah heeft iets onder haar knie zitten.', 'meaning_distractor': 'Sarah heeft er controle over.', 'thisN': 30, 'thisTrialN': 30, 'thisRepN': 0}>
+293.1601 	EXP 	questionText: autoDraw = False
+293.1601 	EXP 	pauseText: text = 'Dit was blok 3 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+293.1601 	EXP 	pauseText: autoDraw = False
+293.1601 	EXP 	fixation: autoDraw = True
+294.1601 	INFO 	Keyboard events cleared
+294.1595 	EXP 	fixation: autoDraw = False
+294.1595 	EXP 	fixation: autoDraw = False
+294.1595 	EXP 	trialText: autoDraw = True
+294.7142 	DATA 	Keypress: space
+295.1638 	DATA 	Keypress: space
+295.8140 	DATA 	Keypress: space
+296.1976 	DATA 	Keypress: space
+296.6474 	DATA 	Keypress: space
+297.2637 	DATA 	Keypress: space
+297.2927 	INFO 	Keyboard events cleared
+297.2922 	EXP 	trialText: autoDraw = False
+297.2922 	EXP 	questionText: height = 0.05
+297.2922 	EXP 	questionText: height = 0.05
+297.2922 	EXP 	questionText: height = 0.05
+297.2922 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Sarah is er goed in.\n\n(b) Sarah heeft er controle over.\n\n(c) Sarah heeft iets onder haar knie zitten.\n\n\nKies je antwoord met (a), (b) of (c)'
+297.2922 	EXP 	questionText: autoDraw = True
+304.6801 	DATA 	Keypress: a
+304.6819 	EXP 	New trial (rep=0, index=31): <Trial 31 (31 in rep 0) data={'stimID': 8, 'stimType': 'experimental', 'transparent': 1, 'idiom': 'Marit heeft het bij het verkeerde eind.', 'meaning_idiomatic': 'Marit heeft ongelijk.', 'meaning_literal': 'Marit houdt iets aan de verkeerde kant vast.', 'meaning_distractor': 'Marit heeft de verkeerde afslag genomen.', 'thisN': 31, 'thisTrialN': 31, 'thisRepN': 0}>
+304.6935 	EXP 	questionText: autoDraw = False
+304.6935 	EXP 	pauseText: text = 'Dit was blok 3 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+304.6935 	EXP 	pauseText: autoDraw = False
+304.6935 	EXP 	fixation: autoDraw = True
+305.6933 	INFO 	Keyboard events cleared
+305.6927 	EXP 	fixation: autoDraw = False
+305.6927 	EXP 	fixation: autoDraw = False
+305.6927 	EXP 	trialText: autoDraw = True
+306.2137 	DATA 	Keypress: space
+306.5802 	DATA 	Keypress: space
+307.0488 	DATA 	Keypress: space
+307.3803 	DATA 	Keypress: space
+307.7135 	DATA 	Keypress: space
+308.1809 	DATA 	Keypress: space
+308.6331 	DATA 	Keypress: space
+308.6759 	INFO 	Keyboard events cleared
+308.6753 	EXP 	trialText: autoDraw = False
+308.6753 	EXP 	questionText: height = 0.05
+308.6753 	EXP 	questionText: height = 0.05
+308.6753 	EXP 	questionText: height = 0.05
+308.6753 	EXP 	questionText: text = '***** Wat betekent deze zin? *****\n\n\n(a) Marit heeft ongelijk.\n\n(b) Marit heeft de verkeerde afslag genomen.\n\n(c) Marit houdt iets aan de verkeerde kant vast.\n\n\nKies je antwoord met (a), (b) of (c)'
+308.6753 	EXP 	questionText: autoDraw = True
+313.0307 	DATA 	Keypress: a
+313.0592 	INFO 	Keyboard events cleared
+313.0587 	EXP 	questionText: autoDraw = False
+313.0587 	EXP 	pauseText: text = 'Dit was blok 3 van de 4.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'
+313.0587 	EXP 	pauseText: autoDraw = False
+313.0587 	EXP 	textEnd: autoDraw = True
+313.0587 	EXP 	textEnd: height = 0.1
+313.0587 	EXP 	textEnd: height = 0.1
+313.0587 	EXP 	textEnd: height = 0.1
+313.0587 	EXP 	textEnd: text = 'We zijn bij het einde van het experiment.\n\nBedankt voor het meedoen!\n\nDruk op de spatiebalk om af te sluiten.'
+315.3662 	DATA 	Keypress: space
+315.3925 	EXP 	textEnd: autoDraw = False
+315.3965 	EXP 	metaphors: status = STOPPED
+315.4534 	INFO 	saved data to 'C:\\Users\\marie\\Desktop\\Experiment Psycholinguïstiek\\data/671836_metaphors_2025-04-04_15h48.27.831.csv'
+315.4565 	INFO 	saved data to C:\Users\marie\Desktop\Experiment Psycholinguïstiek\data/671836_metaphors_2025-04-04_15h48.27.831.psydat
+316.1589 	DEBUG 	Saving data for metaphors ExperimentHandler
