@@ -84,7 +84,7 @@ psychoJS.start({
   resources: [
     // resources:
     {'name': 'resources/practiceStimuli.xlsx', 'path': 'resources/practiceStimuli.xlsx'},
-    {'name': 'resources/test.xlsx', 'path': 'resources/test.xlsx'},
+    {'name': 'resources/idiomStimuli.xlsx', 'path': 'resources/idiomStimuli.xlsx'},
   ]
 });
 
@@ -499,7 +499,7 @@ function trialsLoopBegin(trialsLoopScheduler, snapshot) {
       psychoJS: psychoJS,
       nReps: 1, method: TrialHandler.Method.RANDOM,
       extraInfo: expInfo, originPath: undefined,
-      trialList: 'resources/test.xlsx',
+      trialList: 'resources/idiomStimuli.xlsx',
       seed: undefined, name: 'trials'
     });
     psychoJS.experiment.addLoop(trials); // add the loop to the experiment
