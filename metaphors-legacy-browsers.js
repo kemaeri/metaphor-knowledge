@@ -1446,9 +1446,7 @@ function endRoutineBegin(snapshot) {
     // Generate filename for results
     let filename = expInfo["group"] + "_group_participant_" + expInfo["participant"] + "_" + psychoJS._experiment._experimentName + '_' + psychoJS._experiment._datetime;
     
-    // Extract data object from experiment
-    let dataObj = psychoJS._experiment._trialsData;
-    
+    // Extract data object from experiment and convert to JSON
     let dataJSON = JSON.stringify(psychoJS.experiment._trialsData);
     
     fetch("https://pipe.jspsych.org/api/data/", {
