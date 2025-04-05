@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on April 05, 2025, at 14:09
+    on April 05, 2025, at 14:54
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -128,7 +128,7 @@ def setupData(expInfo, dataDir=None):
         extraInfo=expInfo, runtimeInfo=None,
         originPath='C:\\Users\\marie\\Desktop\\Experiment Psycholinguïstiek\\metaphors_lastrun.py',
         savePickle=True, saveWideText=True,
-        dataFileName=dataDir + os.sep + filename, sortColumns='priority'
+        dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
     thisExp.setPriority('stimID', priority.CRITICAL)
     thisExp.setPriority('stimType', priority.CRITICAL)
@@ -173,7 +173,7 @@ def setupLogging(filename):
         )
     else:
         logFile.setLevel(
-            logging.getLevel('data')
+            logging.getLevel('info')
         )
     
     return logFile
@@ -391,7 +391,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     textWelcome = visual.TextStim(win=win, name='textWelcome',
         text='Welkom!\n\nIn dit onderzoek ga je steeds een zin lezen en dan een vraag beantwoorden. Je ziet de hele zin niet in één keer. Er verschijnt steeds een nieuw stukje als je op de spatiebalk drukt.\n\nWe gaan eerst even oefenen.\n\nDruk op de spatiebalk om verder te gaan.',
         font='Arial',
-        units='norm', pos=(0, 0), draggable=False, height=0.1, wrapWidth=1.8, ori=0.0, 
+        units='norm', pos=(0, 0), draggable=False, height=0.1, wrapWidth=1.5, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
@@ -419,7 +419,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     questionText = visual.TextStim(win=win, name='questionText',
         text='',
         font='Arial',
-        pos=[0,0], draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        pos=[0,0], draggable=False, height=0.05, wrapWidth=1.5, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-1.0);
@@ -465,7 +465,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     questionText = visual.TextStim(win=win, name='questionText',
         text='',
         font='Arial',
-        pos=[0,0], draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        pos=[0,0], draggable=False, height=0.05, wrapWidth=1.5, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-1.0);
@@ -678,10 +678,16 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     if thisPractice != None:
         for paramName in thisPractice:
             globals()[paramName] = thisPractice[paramName]
+    if thisSession is not None:
+        # if running in a Session with a Liaison client, send data up to now
+        thisSession.sendExperimentData()
     
     for thisPractice in practice:
         currentLoop = practice
         thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
+        if thisSession is not None:
+            # if running in a Session with a Liaison client, send data up to now
+            thisSession.sendExperimentData()
         # abbreviate parameter names if possible (e.g. rgb = thisPractice.rgb)
         if thisPractice != None:
             for paramName in thisPractice:
@@ -976,6 +982,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
         # empty buffer
         event.clearEvents()
+        questionText.setText("")
         
         # randomize multiple choice answer positions
         answers = [meaning_idiomatic,meaning_literal,meaning_distractor]
@@ -1290,8 +1297,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             routineTimer.reset()
         else:
             routineTimer.addTime(-1.000000)
+        thisExp.nextEntry()
+        
     # completed 1.0 repeats of 'practice'
     
+    if thisSession is not None:
+        # if running in a Session with a Liaison client, send data up to now
+        thisSession.sendExperimentData()
     
     # --- Prepare to start Routine "start" ---
     # create an object to store info about Routine start
@@ -1752,6 +1764,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
         # empty buffer
         event.clearEvents()
+        questionText.setText("")
         
         # randomize multiple choice answer positions
         answers = [meaning_idiomatic,meaning_literal,meaning_distractor]
@@ -1932,7 +1945,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             breakN += 1
         else:
             continueRoutine = False
-        pauseText.setText('Dit was blok %s van de %s.\n\n\nNeem even pauze en druk dan op de spatiebalk om verder te gaan.'%(breakN,len(breakOn)))
+        pauseText.setText('Dit was blok %s van de %s.\n\n Neem even pauze en druk dan op de spatiebalk om verder te gaan.'%(breakN,len(breakOn)))
         # create starting attributes for pauseKey
         pauseKey.keys = []
         pauseKey.rt = []

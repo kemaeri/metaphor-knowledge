@@ -80,7 +80,7 @@ psychoJS.start({
   ]
 });
 
-psychoJS.experimentLogger.setLevel(core.Logger.ServerLevel.DATA);
+psychoJS.experimentLogger.setLevel(core.Logger.ServerLevel.INFO);
 
 
 var currentLoop;
@@ -474,6 +474,8 @@ function practiceLoopEndIteration(scheduler, snapshot) {
           psychoJS.experiment.nextEntry(snapshot);
         }
         scheduler.stop();
+      } else {
+        psychoJS.experiment.nextEntry(snapshot);
       }
     return Scheduler.Event.NEXT;
     }
