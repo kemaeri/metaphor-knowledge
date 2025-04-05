@@ -1444,7 +1444,7 @@ function endRoutineBegin(snapshot) {
     psychoJS._saveResults = 0;
     
     // Generate filename for results
-    let filename = expInfo["group"] + "_group_participant_" + expInfo["participant"] + "_" + psychoJS._experiment._experimentName + '_' + psychoJS._experiment._datetime + '.csv';
+    let filename = expInfo["group"] + "_group_participant_" + expInfo["participant"] + "_" + psychoJS._experiment._experimentName + '_' + psychoJS._experiment._datetime;
     
     // Extract data object from experiment
     let dataObj = psychoJS._experiment._trialsData;
@@ -1459,7 +1459,7 @@ function endRoutineBegin(snapshot) {
       },
       body: JSON.stringify({
         experimentID: "mTRdgdPYEvkD",
-        filename: `${randomID()}.json`,
+        filename: `${filename}.json`,
         data: dataJSON,
       }),
     });
