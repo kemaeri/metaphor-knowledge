@@ -1262,6 +1262,7 @@ function startRoutineEnd(snapshot) {
 
 var pauseMaxDurationReached;
 var _pj;
+var text;
 var _pauseKey_allKeys;
 var pauseMaxDuration;
 var pauseComponents;
@@ -1299,11 +1300,15 @@ function pauseRoutineBegin(snapshot) {
     if (_pj.in_es6((trials.thisN + 1), breakOn.slice(0, (- 1)))) {
         continueRoutine = true;
         breakN += 1;
+        text = `Dit was blok ${breakN} van de ${breakOn.length}. 
+        
+        Neem even pauze en druk dan op de spatiepalk om verder te gaan.`;
+        pauseText.setText(text);
     } else {
         continueRoutine = false;
     }
     
-    pauseText.setText(`Dit was blok ${breakN} van de ${breakOn.length}`);
+    pauseText.setText(text);
     pauseKey.keys = undefined;
     pauseKey.rt = undefined;
     _pauseKey_allKeys = [];
