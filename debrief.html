@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debriefing</title>
+    <style>
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f4f4f4;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-bottom: 50px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav img {
+            height: 40px;
+        }
+
+        nav p {
+            margin-left: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: #dc002d;
+            color: white;
+            padding: 7px 12px;
+            border-radius: 20px;
+            display: inline-block; /* Ensures consistent spacing */
+        }
+
+        body {
+            padding: 50px;
+            padding-left: max(50px, 10%);
+            padding-right: max(50px, 10%);
+            max-width: 800px;
+            margin: 0 auto;
+            font-family: Georgia, serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        button{
+            display: block; 
+            margin: 20px auto; 
+            margin-top: 50px;
+            padding: 10px 20px; 
+            background-color: #dc002d; 
+            color: white; 
+            border: none; 
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .example {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-left: 4px solid #2a4d69;
+            margin: 10px 0;
+            font-family: monospace;
+            white-space:pre
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+</head>
+<body>
+    <nav>
+        <img src="https://www.rug.nl/_definition/shared/images/logo--en.svg" alt="University of Groningen Logo" style="height: 40px; vertical-align: middle; margin-right: 10px;">
+        <p class="debriefing-text">Debriefing</p>
+    </nav>
+    <div id="content">
+        <!-- Voeg hier de debriefing in voor het kind -->
+         <p>404</p>
+    </div>
+    <button id="close-tab-button">
+        Sluit tabblad
+    </button>
+    <script>
+        // Reference the button element
+        const closeButton = document.getElementById('close-tab-button');
+
+        // Function to close the tab using the button
+        closeButton.addEventListener('click', () => {
+            window.open("", "_blank", "");
+            window.close();
+        });
+
+        // Add hover effect for the button
+        closeButton.addEventListener('mouseover', () => {
+            closeButton.style.backgroundColor = '#a90023';
+        });
+
+        closeButton.addEventListener('mouseout', () => {
+            closeButton.style.backgroundColor = '#dc002d';
+        });
+    </script>
+</body>
+</html>
