@@ -1302,7 +1302,7 @@ function pauseRoutineBegin(snapshot) {
         breakN += 1;
         text = `Dit was blok ${breakN} van de ${breakOn.length}. 
         
-        Neem even pauze en druk dan op de spatiepalk om verder te gaan.`;
+        Druk op de spatiebalk om verder te gaan als je er klaar voor bent.`;
         pauseText.setText(text);
     } else {
         continueRoutine = false;
@@ -1467,7 +1467,7 @@ function endRoutineBegin(snapshot) {
           }),
     }).then(response => response.json()).then(data => {
         console.log(data);
-        quitPsychoJS();
+        quitPsychoJS("Alles is opgeslagen. Bedankt voor het meedoen!", true);
     });
     
     psychoJS.experiment.addData('end.started', globalClock.getTime());

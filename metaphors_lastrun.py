@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on April 05, 2025, at 23:32
+    on April 18, 2025, at 20:21
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -60,7 +60,7 @@ or run the experiment with `--pilot` as an argument. To change what pilot
 PILOTING = core.setPilotModeFromArgs()
 # start off with values from experiment settings
 _fullScr = True
-_winSize = [1536, 864]
+_winSize = [2560, 1440]
 # if in pilot mode, apply overrides according to preferences
 if PILOTING:
     # force windowed mode
@@ -126,7 +126,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\marie\\Desktop\\Experiment Psycholinguïstiek\\metaphors_lastrun.py',
+        originPath='C:\\Users\\medej\\Documents\\EXP Psycholinguistics and Language Disorders\\metaphors_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -1451,7 +1451,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         method='random', 
         extraInfo=expInfo, 
         originPath=-1, 
-        trialList=data.importConditions('resources/test.xlsx'), 
+        trialList=data.importConditions('resources/idiomStimuli.xlsx'), 
         seed=None, 
     )
     thisExp.addLoop(trials)  # add the loop to the experiment
@@ -1943,9 +1943,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if trials.thisN+1 in breakOn[:-1]:
             continueRoutine = True
             breakN += 1
+            text = 'Dit was blok %s van de %s.\n\nDruk op de spatiebalk om verder te gaan als je er klaar voor bent.'%(breakN,len(breakOn))
+            pauseText.setText(text)
         else:
             continueRoutine = False
-        pauseText.setText('Dit was blok %s van de %s.\n\n Neem even pauze en druk dan op de spatiebalk om verder te gaan.'%(breakN,len(breakOn)))
+        pauseText.setText(text)
         # create starting attributes for pauseKey
         pauseKey.keys = []
         pauseKey.rt = []
