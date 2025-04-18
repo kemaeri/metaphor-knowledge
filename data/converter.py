@@ -8,6 +8,7 @@ import configparser
 config = configparser.ConfigParser()
 config_path = os.path.join(os.path.dirname(__file__), '.osfcli.config')
 print(f"Config file path: {config_path}")
+config.read(config_path)
 
 def fetch_data_from_osf():
   # Connect to OSF with authorization for private projects
