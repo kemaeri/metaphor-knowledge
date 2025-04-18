@@ -666,7 +666,9 @@ function fixRoutineEnd(snapshot) {
 var trialMaxDurationReached;
 var words;
 var sentPos;
-var stimulus;
+var maskChar;
+var maskedWords;
+var displayText;
 var clock;
 var trialMaxDuration;
 var trialComponents;
@@ -684,10 +686,21 @@ function trialRoutineBegin(snapshot) {
     // update component parameters for each repeat
     // Run 'Begin Routine' code from trialCode
     psychoJS.eventManager.clearEvents();
-    trialText.setText("");
     words = idiom.split(" ");
     sentPos = 0;
-    stimulus = words[sentPos];
+    
+    words[words.length - 1] = words[words.length - 1].slice(0, -1);
+    
+    maskChar = "#";
+    maskedWords = [];
+    
+    for (let i = 0; i < words.length; i++) {
+        maskedWords.push(maskChar.repeat(words[i].length));
+    }
+    
+    maskedWords[sentPos] = words[sentPos];
+    displayText = (maskedWords.join(" ") + ".");
+    trialText.setText(displayText);
     clock = new util.Clock();
     
     psychoJS.experiment.addData('trial.started', globalClock.getTime());
@@ -704,9 +717,6 @@ function trialRoutineBegin(snapshot) {
 }
 
 
-var theseKeys;
-var n;
-var i;
 function trialRoutineEachFrame() {
   return async function () {
     //--- Loop for each frame of Routine 'trial' ---
@@ -715,36 +725,42 @@ function trialRoutineEachFrame() {
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     // Run 'Each Frame' code from trialCode
-    theseKeys = psychoJS.eventManager.getKeys({keyList:["space", "escape"]});
-    n = theseKeys.length;
-    i = 0;
-    while ((n > i)) {
-        if ((theseKeys[0] === "escape")) {
-            quit();
-            break;
-        } else {
-            if ((theseKeys[0] === "space")) {
-                psychoJS.experiment.addData("readingTimes", clock.getTime());
-                psychoJS.experiment.addData("sentPos", sentPos);
-                psychoJS.experiment.addData("word", stimulus);
-                psychoJS.experiment.nextEntry();
-                clock.reset();
-                sentPos += 1;
-                if ((sentPos === words.length)) {
-                    continueRoutine = false;
-                    break;
-                }
-                stimulus = words[sentPos];
-                i += 1;
+    let theseKeys = psychoJS.eventManager.getKeys();
+    
+    for (let key of theseKeys) {
+        if (key === "escape") {
+            psychoJS.quitExperiment();
+            return;
+        } else if (key === "space") {
+            psychoJS.experiment.addData("readingTimes", clock.getTime());
+            psychoJS.experiment.addData("sentPos", sentPos);
+            psychoJS.experiment.addData("word", words[sentPos]);
+            psychoJS.experiment.nextEntry();
+            clock.reset();
+    
+            sentPos += 1;
+            if (sentPos === words.length) {
+                continueRoutine = false;
             } else {
-                theseKeys = [];
+                maskedWords = [];
+                for (let i = 0; i < words.length; i++) {
+                    maskedWords.push(maskChar.repeat(words[i].length));
+                }
+    
+                // cumulative reveal
+                for (let i = 0; i <= sentPos; i++) {
+                    maskedWords[i] = words[i];
+                }
+    
+                displayText = maskedWords.join(" ") + ".";
+                trialText.setText(displayText);
             }
         }
     }
     
     
     if (trialText.status === PsychoJS.Status.STARTED){ // only update if being drawn
-      trialText.setText(stimulus, false);
+      trialText.setText(displayText, false);
     }
     
     // *trialText* updates
@@ -881,6 +897,9 @@ function questionRoutineBegin(snapshot) {
 }
 
 
+var theseKeys;
+var n;
+var i;
 var participantAnswer;
 var questionCorrect;
 function questionRoutineEachFrame() {

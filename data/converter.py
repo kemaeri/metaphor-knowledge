@@ -38,7 +38,7 @@ def convertFile(json, csv):
   os.makedirs('csv', exist_ok=True)
 
   # Keep only the specified columns
-  df = df[["participant","group","stimType","transparent","stimID", "idiom", "sentPos", "word","readingTimes","questionCorrect","participantAnswer","trial.started", "trial.stopped", "date"]]
+  df = df[["date","participant","group","stimType","transparent","stimID", "idiom", "sentPos", "word","readingTimes","questionCorrect","participantAnswer"]]
 
   # Save the final CSV to the 'csv' folder
   csv_filename = os.path.splitext(csv)[0] + '.csv'

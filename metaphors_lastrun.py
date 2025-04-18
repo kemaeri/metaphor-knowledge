@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on April 18, 2025, at 20:21
+    on April 18, 2025, at 21:12
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -826,15 +826,22 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         continueRoutine = True
         # update component parameters for each repeat
         # Run 'Begin Routine' code from trialCode
-        # clear any previous keypresses
         event.clearEvents()
-        trialText.setText("")
+        
         # parse stimulus
         words = idiom.split(" ")
-        
-        # prepare word display
         sentPos = 0
-        stimulus = words[sentPos]
+        
+        # Always remove the period from the last word
+        words[-1] = words[-1][:-1]  # chop off final period
+        
+        # create initial masked sentence
+        maskChar = "#"
+        maskedWords = [maskChar * len(w) for w in words]
+        maskedWords[sentPos] = words[sentPos]  # show only first word
+        displayText = " ".join(maskedWords) + "."  # re-add period for display
+        
+        trialText.setText(displayText)
         
         # initiate clock
         clock = core.Clock()
@@ -871,32 +878,31 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
             # Run 'Each Frame' code from trialCode
-            theseKeys = event.getKeys(["space","escape"])
-            n = len(theseKeys)
-            i = 0
+            theseKeys = event.getKeys(["space", "escape"])
             
-            # action on keypress
-            while n > i:
-                if theseKeys[0] == "escape":
-                    # break out of experiment when escape is pressed
-                    quit()
-                    break
-                elif theseKeys[0] == "space":
-                    thisExp.addData("readingTimes",clock.getTime())
+            for key in theseKeys:
+                if key == "escape":
+                    core.quit()
+                elif key == "space":
+                    # log data
+                    thisExp.addData("readingTimes", clock.getTime())
                     thisExp.addData("sentPos", sentPos)
-                    thisExp.addData("word", stimulus)
+                    thisExp.addData("word", words[sentPos])
                     thisExp.nextEntry()
                     clock.reset()
-                    # update sentence position on spacebar press
+            
+                    # advance window
                     sentPos += 1
                     if sentPos == len(words):
-                        # if end of sentence is reached, exit routine
                         continueRoutine = False
-                        break
-                    stimulus = words[sentPos]
-                    i += 1
-                else:
-                    theseKeys = []
+                    else:
+                        # reveal new word
+                        maskedWords = [maskChar * len(w) for w in words]
+                        for i in range(sentPos + 1):
+                            maskedWords[i] = words[i]
+                        displayText = " ".join(maskedWords) + "."
+                        trialText.setText(displayText)
+            
             
             # *trialText* updates
             
@@ -916,7 +922,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # if trialText is active this frame...
             if trialText.status == STARTED:
                 # update params
-                trialText.setText(stimulus, log=False)
+                trialText.setText(displayText, log=False)
             
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1608,15 +1614,22 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         continueRoutine = True
         # update component parameters for each repeat
         # Run 'Begin Routine' code from trialCode
-        # clear any previous keypresses
         event.clearEvents()
-        trialText.setText("")
+        
         # parse stimulus
         words = idiom.split(" ")
-        
-        # prepare word display
         sentPos = 0
-        stimulus = words[sentPos]
+        
+        # Always remove the period from the last word
+        words[-1] = words[-1][:-1]  # chop off final period
+        
+        # create initial masked sentence
+        maskChar = "#"
+        maskedWords = [maskChar * len(w) for w in words]
+        maskedWords[sentPos] = words[sentPos]  # show only first word
+        displayText = " ".join(maskedWords) + "."  # re-add period for display
+        
+        trialText.setText(displayText)
         
         # initiate clock
         clock = core.Clock()
@@ -1653,32 +1666,31 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
             # Run 'Each Frame' code from trialCode
-            theseKeys = event.getKeys(["space","escape"])
-            n = len(theseKeys)
-            i = 0
+            theseKeys = event.getKeys(["space", "escape"])
             
-            # action on keypress
-            while n > i:
-                if theseKeys[0] == "escape":
-                    # break out of experiment when escape is pressed
-                    quit()
-                    break
-                elif theseKeys[0] == "space":
-                    thisExp.addData("readingTimes",clock.getTime())
+            for key in theseKeys:
+                if key == "escape":
+                    core.quit()
+                elif key == "space":
+                    # log data
+                    thisExp.addData("readingTimes", clock.getTime())
                     thisExp.addData("sentPos", sentPos)
-                    thisExp.addData("word", stimulus)
+                    thisExp.addData("word", words[sentPos])
                     thisExp.nextEntry()
                     clock.reset()
-                    # update sentence position on spacebar press
+            
+                    # advance window
                     sentPos += 1
                     if sentPos == len(words):
-                        # if end of sentence is reached, exit routine
                         continueRoutine = False
-                        break
-                    stimulus = words[sentPos]
-                    i += 1
-                else:
-                    theseKeys = []
+                    else:
+                        # reveal new word
+                        maskedWords = [maskChar * len(w) for w in words]
+                        for i in range(sentPos + 1):
+                            maskedWords[i] = words[i]
+                        displayText = " ".join(maskedWords) + "."
+                        trialText.setText(displayText)
+            
             
             # *trialText* updates
             
@@ -1698,7 +1710,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # if trialText is active this frame...
             if trialText.status == STARTED:
                 # update params
-                trialText.setText(stimulus, log=False)
+                trialText.setText(displayText, log=False)
             
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
