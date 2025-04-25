@@ -65,10 +65,10 @@ flowScheduler.add(trialsLoopEnd);
 flowScheduler.add(endRoutineBegin());
 flowScheduler.add(endRoutineEachFrame());
 flowScheduler.add(endRoutineEnd());
-flowScheduler.add(quitPsychoJS, 'Thank you for your patience.', true);
+flowScheduler.add(quitPsychoJS, 'Bedankt voor het meedoen!', true);
 
 // quit if user presses Cancel in dialog box:
-dialogCancelScheduler.add(quitPsychoJS, 'Thank you for your patience.', false);
+dialogCancelScheduler.add(quitPsychoJS, 'Bedankt voor het meedoen!', false);
 
 psychoJS.start({
   expName: expName,
@@ -77,6 +77,8 @@ psychoJS.start({
     // resources:
     {'name': 'resources/practiceStimuli.xlsx', 'path': 'resources/practiceStimuli.xlsx'},
     {'name': 'resources/idiomStimuli.xlsx', 'path': 'resources/idiomStimuli.xlsx'},
+    {'name': 'resources/idiomStimuli.xlsx', 'path': 'resources/idiomStimuli.xlsx'},
+    {'name': 'resources/practiceStimuli.xlsx', 'path': 'resources/practiceStimuli.xlsx'},
   ]
 });
 
