@@ -694,7 +694,7 @@ function trialRoutineBegin(snapshot) {
     
     words[words.length - 1] = words[words.length - 1].slice(0, -1);
     
-    maskChar = "#";
+    maskChar = "-";
     maskedWords = [];
     
     for (let i = 0; i < words.length; i++) {
@@ -750,11 +750,8 @@ function trialRoutineEachFrame() {
                     maskedWords.push(maskChar.repeat(words[i].length));
                 }
     
-                // cumulative reveal
-                for (let i = 0; i <= sentPos; i++) {
-                    maskedWords[i] = words[i];
-                }
-    
+                // current word reveal
+                maskedWords[sentPos] = words[sentPos];
                 displayText = maskedWords.join(" ") + ".";
                 trialText.setText(displayText);
             }

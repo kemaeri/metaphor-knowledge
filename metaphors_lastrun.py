@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on April 25, 2025, at 15:07
+    on May 10, 2025, at 19:22
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -836,7 +836,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         words[-1] = words[-1][:-1]  # chop off final period
         
         # create initial masked sentence
-        maskChar = "#"
+        maskChar = "-"
         maskedWords = [maskChar * len(w) for w in words]
         maskedWords[sentPos] = words[sentPos]  # show only first word
         displayText = " ".join(maskedWords) + "."  # re-add period for display
@@ -896,10 +896,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     if sentPos == len(words):
                         continueRoutine = False
                     else:
-                        # reveal new word
+                        # reveal only the current word
                         maskedWords = [maskChar * len(w) for w in words]
-                        for i in range(sentPos + 1):
-                            maskedWords[i] = words[i]
+                        maskedWords[sentPos] = words[sentPos]
                         displayText = " ".join(maskedWords) + "."
                         trialText.setText(displayText)
             
@@ -1624,7 +1623,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         words[-1] = words[-1][:-1]  # chop off final period
         
         # create initial masked sentence
-        maskChar = "#"
+        maskChar = "-"
         maskedWords = [maskChar * len(w) for w in words]
         maskedWords[sentPos] = words[sentPos]  # show only first word
         displayText = " ".join(maskedWords) + "."  # re-add period for display
@@ -1684,10 +1683,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     if sentPos == len(words):
                         continueRoutine = False
                     else:
-                        # reveal new word
+                        # reveal only the current word
                         maskedWords = [maskChar * len(w) for w in words]
-                        for i in range(sentPos + 1):
-                            maskedWords[i] = words[i]
+                        maskedWords[sentPos] = words[sentPos]
                         displayText = " ".join(maskedWords) + "."
                         trialText.setText(displayText)
             
